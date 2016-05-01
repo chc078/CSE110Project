@@ -17,7 +17,7 @@ module.exports = function(passport){
 	/* GET login page. */
 	router.get('/', function(req, res) {
     	// Display the Login page with any flash message, if any
-		res.render('temp', { message: req.flash('message') });
+		res.render('index', { message: req.flash('message') });
 	});
 
 	/* Handle Login POST */
@@ -26,7 +26,7 @@ module.exports = function(passport){
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
-
+-express4/node_modules/express/lib/router/index.js:330:12)
 	/* GET Registration Page */
 	router.get('/signup', function(req, res){
 		res.render('register',{message: req.flash('message')});
