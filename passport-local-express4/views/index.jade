@@ -1,0 +1,24 @@
+
+doctype html
+html(lang='en')
+  head
+    script(src='https://code.jquery.com/jquery-2.2.3.min.js')
+    script(src='animation.js')
+    link(rel='stylesheet', type='text/css', href='styleLogin.css')
+    meta(charset='UTF-8')
+    title Login
+  body
+    .wrapper
+      .container
+        h1 Login
+        form.UserNameAndPassword
+        form(class='form-signin', action='/login', method='POST')
+            input(type='text', name='username' class='form-control', placeholder='Username',required, autofocus)
+            input(type='password', name='password' class='form-control', placeholder='Password', required)
+            button(class='btn btn-lg btn-primary btn-block', type='submit') Sign in
+             button#loginButton(type='submit') Login
+            button#forget_password(type='submit') Forgot your Password?
+          a(class='button',href='/signup') Create an account
+          #message
+          if message
+            h1.text-center.error-message #{message}
