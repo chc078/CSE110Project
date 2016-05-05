@@ -26,7 +26,7 @@ module.exports = function(passport){
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
--express4/node_modules/express/lib/router/index.js:330:12)
+
 	/* GET Registration Page */
 	router.get('/signup', function(req, res){
 		res.render('register',{message: req.flash('message')});
