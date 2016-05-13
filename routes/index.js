@@ -39,6 +39,19 @@ module.exports = function(passport){
 		failureFlash : true  
 	}));
 
+	/* GET login page. */
+	router.get('/results', function(req, res) {
+		// Display the Login page with any flash message, if any
+		res.render('searchResults', { message: req.flash('message') });
+	});
+
+	/* Handle Login POST */
+	router.post('/results', passport.authenticate('login', {
+		successRedirect: '/home',
+		failureRedirect: '/',
+		failureFlash : true
+	}));
+
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
 		res.render('home', { user: req.user });
