@@ -1,0 +1,16 @@
+html{
+    background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
