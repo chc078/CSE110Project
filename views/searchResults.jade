@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+    head
+        link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Abril+Fatface')
+        meta(name='viewport', content='initial-scale=1')
+        link(rel='stylesheet', type='text/css', href='stylesheets/styleSearchResults.css')
+        meta(charset='UTF-8')
+        title foodopia
+    body
+        h1 FOODOPIA
+
+        .row
+            .col-lg-6
+                .input-group
+                    input.form-control(type='text', placeholder='Search for...')
+                // /input-group
+            // /.col-lg-6
+        // /.row
+
+
+        .calorie.range-slider
+            input.range-slider__range(type='range', value='100', min='0', max='7000', step='100')
+            span.range-slider__value 0
+        .time.range-slider
+            input.range-slider__range(type='range', value='250', min='0', max='500', step='50')
+            span.range-slider__value 0
