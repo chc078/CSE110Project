@@ -5,14 +5,16 @@ html(lang='en')
         meta(name='viewport', content='initial-scale=1')
         link(rel='stylesheet', type='text/css', href='stylesheets/styleSearchResults.css')
         meta(charset='UTF-8')
-        title foodopia
+        title Recipe Results
     body
-        headers
-            h1 FOODOPIA
-            form.search-container
-                input#search-bar(type='text', placeholder='What can I help you with today?')
-                a(href='#')
-                    img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
+        #headers.headers
+
+                h1 FOODOPIA
+
+                form.search-container
+                    input#search-bar(type='text', placeholder='What can I help you with today?')
+                    //a(href='#')
+                        img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
 
         filters#Filters.controls
             // We can add an unlimited number of "filter groups" using the following format:
