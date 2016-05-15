@@ -8,10 +8,8 @@ html(lang='en')
         title Recipe Results
     body
         #headers.headers
-
-                h1 FOODOPIA
-
                 form.search-container
+                    h1 FOODOPIA
                     input#search-bar(type='text', placeholder='Search for...')
                     //a(href='#')
                         img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
@@ -41,7 +39,7 @@ html(lang='en')
                 .checkbox
                     input(type='checkbox', value='.thai')
                     label Thai
-                button#Reset Clear Filters
+
             ul.meal-type
                 li Appetizers
                 li Breakfast & Brunch
@@ -50,12 +48,10 @@ html(lang='en')
                 li Drinks
                 li Snacks
                 li Others
-            .calorie.range-slider
-                input.range-slider__range(type='range', value='100', min='0', max='7000', step='100')
-                span.range-slider__value 0
-            .time.range-slider
-                input.range-slider__range(type='range', value='250', min='0', max='500', step='50')
-                span.range-slider__value 0
+            #sliders
+                input.slider(value='20', min='0', max='100', name='calorieslider', type='range')
+                input.slider(value='20', min='0', max='100', name='timeslider', type='range')
+                button.clear(ng-click='clearFilters') Clear Filters
 
 
 

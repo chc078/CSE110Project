@@ -29,29 +29,24 @@ img{
 }
 
 /* Heading */
-.headers{
-
-}
-.division{
-    display: inline-block;
-    width: 100%;
-}
 h1{
     font-family: 'Abril Fatface';
     position: relative;
-    margin-top: 0px;
+    margin: auto;
     text-align: left;
     font-size: 3vw;
     color: #ddd;
-    width: 10%;
+    width: 20%;
+    height: 45px;
     text-shadow: 3px 3px 10px #000;
     float: left;
 }
 .search-container{
     width: 100%;
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 input#search-bar{
@@ -62,6 +57,7 @@ input#search-bar{
     font-size: 1rem;
     border: 1px solid #D0CFCE;
     outline: none;
+    float: right;
 }
 
 .search-icon{
@@ -130,6 +126,14 @@ button{
  * Filters and Checkbox Styles
  */
 
+.controls{
+    padding: 2%;
+    display: inline-block;
+    margin: auto;
+    width: 95%;
+    background: rgba(250, 252, 232, 0.6);
+}
+
 h4{
     display: inline-block;
     font-weight: 700;
@@ -160,19 +164,42 @@ button:focus{
     outline: 0 none;
 }
 
-.controls{
-    padding: 2%;
-    display: inline-block;
-    margin: auto;
-    width: 95%;
-    background: rgba(250, 252, 232, 0.5);
+button.clear {
+    background: #3f5872;
+    border-bottom: 4px solid #2b3c4e;
+}
+
+button.clear:hover {
+    background: #384e65;
+    border-bottom: 2px solid #2b3c4e;
+}
+
+button {
+    margin: 0.25em 0;
+    display: block;
+    outline: none;
+    background: #fb887c;
+    border: none;
+    padding: 1.1em;
+    border-radius: 6px;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 4px solid #fa7263;
+}
+button:hover {
+    border-bottom: 2px solid #fa7263;
+    margin-bottom: 0.9em;
+    box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 fieldset{
     padding: 10px;
     display: block;
     vertical-align: top;
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
@@ -245,7 +272,7 @@ fieldset{
 .meal-type {
     list-style: none;
     margin: auto;
-    width: 70%;
+    width: 100%;
     padding: 0;
 }
 
@@ -254,14 +281,17 @@ li {
     padding: .5em 1em;
     border: 1px solid #ddd;
 }
-
-.calorie{
-    display: inline;
+.range-slider {
+    display: inline-block;
     width: 50%;
-}
-.time{
-    display: inline;
-    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 15px;
 }
 
+#sliders{
+    display: block;
+}
 
