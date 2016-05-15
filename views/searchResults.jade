@@ -7,20 +7,56 @@ html(lang='en')
         meta(charset='UTF-8')
         title foodopia
     body
-        h1 FOODOPIA
+        headers
+            h1 FOODOPIA
+            form.search-container
+                input#search-bar(type='text', placeholder='What can I help you with today?')
+                a(href='#')
+                    img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
 
-        .row
-            .col-lg-6
-                .input-group
-                    input.form-control(type='text', placeholder='Search for...')
-                // /input-group
-            // /.col-lg-6
-        // /.row
+        filters#Filters.controls
+            // We can add an unlimited number of "filter groups" using the following format:
+            fieldset
+                h4 Cuisines
+                .checkbox
+                    input(type='checkbox', value='.mexican')
+                    label Mexican
+                .checkbox
+                    input(type='checkbox', value='.indian')
+                    label Indian
+                .checkbox
+                    input(type='checkbox', value='.chinese')
+                    label Chinese
+                .checkbox
+                    input(type='checkbox', value='.american')
+                    label American
+                .checkbox
+                    input(type='checkbox', value='.italian')
+                    label Italian
+                .checkbox
+                    input(type='checkbox', value='.japanese')
+                    label Japanese
+                .checkbox
+                    input(type='checkbox', value='.thai')
+                    label Thai
+                button#Reset Clear Filters
+            ul.meal-type
+                li Appetizers
+                li Breakfast & Brunch
+                li Deserts
+                li Entrees
+                li Drinks
+                li Snacks
+                li Others
+            .calorie.range-slider
+                input.range-slider__range(type='range', value='100', min='0', max='7000', step='100')
+                span.range-slider__value 0
+            .time.range-slider
+                input.range-slider__range(type='range', value='250', min='0', max='500', step='50')
+                span.range-slider__value 0
 
 
-        .calorie.range-slider
-            input.range-slider__range(type='range', value='100', min='0', max='7000', step='100')
-            span.range-slider__value 0
-        .time.range-slider
-            input.range-slider__range(type='range', value='250', min='0', max='500', step='50')
-            span.range-slider__value 0
+
+
+
+
