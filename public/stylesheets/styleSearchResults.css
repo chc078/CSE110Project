@@ -1,7 +1,6 @@
 html{
-    /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;
-    background: url("http://www.sheepscotgeneral.com/wp-content/uploads/2013/10/Light-Wood-Background-Wallpaper.jpg") no-repeat center center fixed;*/
-    background: rgba(255, 252, 240, 1);
+    /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;*/
+    background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -30,6 +29,9 @@ img{
 }
 
 /* Heading */
+.headers{
+
+}
 .division{
     display: inline-block;
     width: 100%;
@@ -49,11 +51,12 @@ h1{
     width: 100%;
     display: block;
     margin: 0 auto;
+    padding-top: 5px;
 }
 
 input#search-bar{
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     height: 45px;
     padding: 0 20px;
     font-size: 1rem;
@@ -159,10 +162,10 @@ button:focus{
 
 .controls{
     padding: 2%;
-    border: 3px solid #73AD21;
     display: inline-block;
     margin: auto;
     width: 95%;
+    background: rgba(250, 252, 232, 0.5);
 }
 
 fieldset{
@@ -251,3 +254,14 @@ li {
     padding: .5em 1em;
     border: 1px solid #ddd;
 }
+
+.calorie{
+    display: inline;
+    width: 50%;
+}
+.time{
+    display: inline;
+    width: 50%;
+}
+
+
