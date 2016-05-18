@@ -10,49 +10,65 @@ html(lang='en')
         #headers.headers
                 form.search-container
                     h1 FOODOPIA
-                    input#search-bar(type='text', placeholder='Search for...')
+                    input.search-bar(type='text', placeholder='Search for...')
                     //a(href='#')
                         img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
 
+
         filters#Filters.controls
-            // We can add an unlimited number of "filter groups" using the following format:
-            fieldset
-                h4 Cuisines
-                .checkbox
-                    input(type='checkbox', value='.mexican')
-                    label Mexican
-                .checkbox
-                    input(type='checkbox', value='.indian')
-                    label Indian
-                .checkbox
-                    input(type='checkbox', value='.chinese')
-                    label Chinese
-                .checkbox
-                    input(type='checkbox', value='.american')
-                    label American
-                .checkbox
-                    input(type='checkbox', value='.italian')
-                    label Italian
-                .checkbox
-                    input(type='checkbox', value='.japanese')
-                    label Japanese
-                .checkbox
-                    input(type='checkbox', value='.thai')
-                    label Thai
+            #container
+                .cuisines
+                    .filters
+                        .filter.filter--input.filter--cuisine
+                            input.cuisine(type="text" placeholder="What am I feeling like?" data-placeholder="What am I feeling like?"
+                            data-placeholder-expanded="Cuisine")
+                            .icon.icon--cuisine
+                            .icon.icon--clear
+                        input#c1(type='checkbox', name='cb')
+                        label(for='c1') Chinese
+                        input#c2(type='checkbox', name='cb')
+                        label(for='c2') Mexican
+                        input#c3(type='checkbox', name='cb')
+                        label(for='c3') Thai
+                        input#c4(type='checkbox', name='cb')
+                        label(for='c4') American
+                        input#c5(type='checkbox', name='cb')
+                        label(for='c5') Indian
+                        input#c6(type='checkbox', name='cb')
+                        label(for='c6') Others
+                    h3 Cuisines
+                    input#c1(type='checkbox', name='cb')
+                    label(for='c1') Chinese
+                    input#c2(type='checkbox', name='cb')
+                    label(for='c2') Mexican
+                    input#c3(type='checkbox', name='cb')
+                    label(for='c3') Thai
+                    input#c4(type='checkbox', name='cb')
+                    label(for='c4') American
+                    input#c5(type='checkbox', name='cb')
+                    label(for='c5') Indian
+                    input#c6(type='checkbox', name='cb')
+                    label(for='c6') Others
 
-            ul.meal-type
-                li Appetizers
-                li Breakfast & Brunch
-                li Deserts
-                li Entrees
-                li Drinks
-                li Snacks
-                li Others
-            #sliders
-                input.slider(value='20', min='0', max='100', name='calorieslider', type='range')
-                input.slider(value='20', min='0', max='100', name='timeslider', type='range')
-                button.clear(ng-click='clearFilters') Clear Filters
-
+                .meal-type
+                    h3 Meal Type
+                    input#m1(type='checkbox', name='cb')
+                    label(for='m1') Appetizers
+                    input#m2(type='checkbox', name='cb')
+                    label(for='m2') Breakfast & Brunch
+                    input#m3(type='checkbox', name='cb')
+                    label(for='m3') Entrees
+                    input#m4(type='checkbox', name='cb')
+                    label(for='m4') Dinners
+                    input#m5(type='checkbox', name='cb')
+                    label(for='m5') Lunch
+                    input#m6(type='checkbox', name='cb')
+                    label(for='m6') Snack
+                    input#m7(type='checkbox', name='cb')
+                    label(for='m7') Desserts
+                    input#m8(type='checkbox', name='cb')
+                    label(for='m8') Others
+            button.clear(ng-click='clearFilters') Clear Filters
 
 
 
