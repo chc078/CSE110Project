@@ -23,3 +23,11 @@ $('#forgotten').click(function(){
         $("#forgotten-container").fadeIn();
     });
 });
+
+$(document).click(function(){
+    $("#message").fadeOut();
+});
+
+$(document).keypress(function(){
+    $("#message").fadeOut();
+});
