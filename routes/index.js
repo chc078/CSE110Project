@@ -17,7 +17,10 @@ module.exports = function(passport){
 	/* GET login page. */
 	router.get('/', function(req, res) {
     	// Display the Login page with any flash message, if any
-		res.render('foodopiaMainPage', { message: req.flash('message') });
+		if (req.user)
+			res.redirect('home', { message: req.flash('message') }, {user: req.user});
+		else
+			res.render('foodopiaMainPage', { message: req.flash('message') });
 	});
 
 	/* Handle Login POST */
@@ -48,6 +51,10 @@ module.exports = function(passport){
 	router.get('/signout', function(req, res) {
 		req.logout();
 		res.redirect('/');
+	});
+
+	router.get('/storage', function(req, res){
+		res.render('VirtualFridge',{message: req.flash('message')});
 	});
 
 	return router;

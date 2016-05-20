@@ -4,7 +4,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
+    overflow: scroll;
 
 }
 
@@ -262,5 +262,20 @@ a:hover{
 
 .orange-btn{
     background: rgba(255, 136, 9, 0.5);
+}
+
+#signup-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 25vw;
+    height: 27vw;
+    border-radius: 2vw;
+    background: rgba(3,3,3,0.7);
+    box-shadow: 1px 1px 50px #000;
+    display: none;
 }
 

@@ -38,7 +38,7 @@ html, body {
 }
 
 .box {
-  width: 49%;
+  width: 98%;
   background: #f3f3f3;
   margin: 0 auto 2em auto;
   overflow: auto;
@@ -285,6 +285,14 @@ i.fa-shopping-cart{
   color: black;
 }
 
+i.fa-arrow-left{
+  color: black;
+}
+
+i.fa-home{
+  color: black;
+}
+
 #successMessage {
   color: green;
 }
@@ -311,3 +319,29 @@ i.fa-shopping-cart{
 .cf:after {
   clear: both;
 }
+
+#cart{
+  position: relative;
+  margin-left: 21vw;
+}
+
+#fridge{
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 21vw;
+  margin-top: 2.5vw;
+  margin-bottom: 2.5vw;
+}
+
+#home{
+  background-color: transparent;
+  width: 3%;
+}
+
+#back{
+  background-color: transparent;
+  width: 3%;
+}
+

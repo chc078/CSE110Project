@@ -31,3 +31,9 @@ $(document).click(function(){
 $(document).keypress(function(){
     $("#message").fadeOut();
 });
+
+$('#register').click(function(){
+    $('#container').fadeOut("slow",function(){
+        $("#signup-container").fadeIn();
+    });
+});

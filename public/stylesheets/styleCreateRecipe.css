@@ -1,0 +1,249 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: url("http://wallpaper.zone/img/5429429.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: scroll;
+    height: 100%;
+    padding: 1em;
+}
+
+.division{
+    width:50%;
+    height:100px;
+    float: left;
+}
+
+.save-button {
+    float: right;
+    cursor: pointer;
+}
+.saveRecipe {
+    cursor: pointer;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.box {
+    width: 49%;
+    background: rgba(210, 166, 121, 0.5);
+    margin: 0 auto 2em auto;
+    overflow: auto;
+    padding: 0.7em;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+.box:first-child {
+    margin-right: 0.05%;
+}
+
+h1 {
+    font-family: 'Abril Fatface';
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    font-size: 5vw;
+    size: 10vw;
+    color: #ddd;
+    text-shadow: 3px 3px 10px #000;
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 800;
+    color: white;
+}
+
+label.saveRecipe{
+    font-size: 1.7vw;
+}
+
+.textBox {
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    padding: 0.5em;
+
+    font-weight: 300;
+    font-size: 1.2em;
+    width: 35vw;
+    height: 3.3vw;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border: 0;
+    margin-left: 2vw;
+}
+
+tr, td {
+    padding: 0.6vw;
+    text-align: center;
+    color: white;
+    border: 0;
+
+}
+tr.tableheader {
+     font-size: 1.5vw;
+     margin-bottom: 0;
+}
+
+.IngredientName {
+    background-color: transparent;
+    border-width: 0 0 1.5px 0;
+    border-color: white;
+    color: white;
+    padding: 0.5em;
+    font-size: 1em;
+    width: 13vw;
+    height: 2.5vw;
+    margin-left: 1.5vw;
+    margin-right: 0.6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.IngredientQuantity {
+    border-width: 0 0 1.5px 0;
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    padding: 0.5em;
+    font-size: 1em;
+    width: 13vw;
+    height: 2.5vw;
+    margin-left: 1.5vw;
+    margin-right: 0.6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.Plus {
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.manipulateButton {
+    float: right;
+}
+
+.procedure {
+    border-style: solid;
+    border-width: 0 0 1.5px 0;
+    border-color: white;
+    color: white;
+    font-size: 1.2em;
+    background-color: transparent;
+    width: 33vw;
+    height: 1.5vw;
+    padding: 0.8em;
+
+}
+
+.margin-right {
+    margin-right: 1%;
+}
+
+.half {
+    width: 49.5%;
+    display: inline-block;
+}
+.half input {
+    width: 100%;
+}
+
+.half:first-child {
+    margin-right: 2%;
+}
+
+.selected {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+input[type='checkbox'] {
+    background: transparent;
+    border: 2px solid #3a3a3a;
+    padding: 0.2em;
+    font-size: 1em;
+}
+
+
+i {
+    vertical-align: center;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 1em;
+    padding: 0;
+    font-size: 0.8em;
+    color: white;
+}
+
+i.fa{
+    cursor: pointer;
+}
+
+i.fa-plus-circle {
+    color: white;
+    font-size: 1.5em;
+}
+
+i.fa-minus-circle {
+    color: white;
+    font-size: 1.5em;
+}
+
+i.fa-floppy-o {
+    color: white;
+    font-size: 2.3em;
+}
+
+@media (max-width: 800px) {
+    .box {
+        width: 100%;
+        display: block;
+    }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

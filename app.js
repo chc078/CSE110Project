@@ -8,13 +8,16 @@ var bodyParser = require('body-parser');
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
 // Connect to DB
-mongoose.connect(dbConfig.url);
+//mongoose.connect(dbConfig.url);
+mongoose.connect('mongodb://CSE110ELF:cse110elf@ds015879.mlab.com:15879/usertest');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
 
 app.use(favicon());
 app.use(logger('dev'));

@@ -1,98 +1,109 @@
 <html ng-app="root">
 <head>
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
-	<link rel="stylesheet" type="text/css" href="../public/stylesheets/styleVirtualFridge.css">
-	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/styleVirtualFridge.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
+<div>
+    <div class="box" id="home">
+        <a href="/home"><i class="fa fa-home fa-2x" aria-hidden="true" id="home-button"></i></a>
+    </div>
 
+    <div class="box"  id="back">
+        <i class="fa fa-arrow-left fa-2x" aria-hidden="true" id="back-button"></i>
+    </div>
+</div>
 
 <div class="division" id="shopping-button">
-	<i class="fa fa-shopping-cart fa-5x" aria-hidden="true" id="cart"></i>
-	<h1>Shopping List</h1>
-
+    <i class="fa fa-shopping-cart fa-5x" aria-hidden="true" id="cart"></i>
+    <h1>Shopping List</h1>
 </div>
 
 <div class="division" id="inventory-button">
-	<img class="icon icons8-Fridge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAACDklEQVRoQ+1a7U3EMAx9NwEwATABMAEwCbABm8AGwCTABMAEwAYwAehJjRRy7flDbqpDzr8qie33ns+XNl7BNi4AXAM4tm1zr34FcAvgQWthpVy4C+CxI5A2LAI7B/AlxasF9LIgmIKBoE4iADHFbiRDneavANxv8qVRqFXnGcAlgI+ZQRwMwZ9WfkSVNIB+msAPO4ApLgnqvfG/MWYPIM2eSPFaQhNQy66JoUhpBlsm/5r0MRn8D4DOANwNQFhWn4JBmQiNUIhViNWIg6WcVTBydAdkcuhAarIfoZDJYQICTISlQgBaEnik3xlS6bMqEI7sGt3SXSGW7XIC5qF168t2lBJTdrortPWA5gYg2Q8/bUsO555PQNLrw9wKSPbDFdL8GUtBWeazyklsSQzl+5DEYDMvEfpnueb3IBmU5o3xry032U9AI6dtE4MOuUz2U6FUyJFjS1e5fGM1ita9KBjjMy9PQBJlJoYkY455k/+I/yFHjKYtCUiiy8SQZMwxb/KfKTdy9HGQbtoSrlB9EmAke5oWFVPI04vba/1vAGzTmRyalOO36rr5gc+8euzReMGrTr7il8Gmj/p5DZgGED/AlzvUIOLdZkJaY+idLSlH7jBiNr5pGqg0CjEc5i1TbSlQBMNUC2svKxwvkX5imtUJoFWo3tNWPc5F3NyF2PUAKjd2+wNKgom4uQux+wuR+pA16m8frQAAAABJRU5ErkJggg==" width="52" height="52">
-	<h1>Virtual Fridge</h1>
+    <img class="icon icons8-Fridge w3-xxxlarge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAACDklEQVRoQ+1a7U3EMAx9NwEwATABMAEwCbABm8AGwCTABMAEwAYwAehJjRRy7flDbqpDzr8qie33ns+XNl7BNi4AXAM4tm1zr34FcAvgQWthpVy4C+CxI5A2LAI7B/AlxasF9LIgmIKBoE4iADHFbiRDneavANxv8qVRqFXnGcAlgI+ZQRwMwZ9WfkSVNIB+msAPO4ApLgnqvfG/MWYPIM2eSPFaQhNQy66JoUhpBlsm/5r0MRn8D4DOANwNQFhWn4JBmQiNUIhViNWIg6WcVTBydAdkcuhAarIfoZDJYQICTISlQgBaEnik3xlS6bMqEI7sGt3SXSGW7XIC5qF168t2lBJTdrortPWA5gYg2Q8/bUsO555PQNLrw9wKSPbDFdL8GUtBWeazyklsSQzl+5DEYDMvEfpnueb3IBmU5o3xry032U9AI6dtE4MOuUz2U6FUyJFjS1e5fGM1ita9KBjjMy9PQBJlJoYkY455k/+I/yFHjKYtCUiiy8SQZMwxb/KfKTdy9HGQbtoSrlB9EmAke5oWFVPI04vba/1vAGzTmRyalOO36rr5gc+8euzReMGrTr7il8Gmj/p5DZgGED/AlzvUIOLdZkJaY+idLSlH7jBiNr5pGqg0CjEc5i1TbSlQBMNUC2svKxwvkX5imtUJoFWo3tNWPc5F3NyF2PUAKjd2+wNKgom4uQux+wuR+pA16m8frQAAAABJRU5ErkJggg==" id="fridge">
+    <h1>Virtual Fridge</h1>
 
 </div>
 
 <div class="container" ng-controller="index">
 
-		  <div class="box margin-right" id="shopping-list">
-		    <h1>My Shopping List</h1>
-		    
-		    <div id="errorMessage"><i class="icon-cross"></i>Please enter all inputs!</div>
-		    
-		    <div id="successMessage"><i class="icon-checkmark"></i>Item added to shopping list!</div>
-		    
-		    <div class="half margin-right">
-		     <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
-    </div><div class="half"><input type='text'   class="searchButton" placeholder='Expiration Date (mm/dd/yyyy)' ng-model="itemShop" required></div>
-    <div class="half margin-right">
-		     	<input type='number' class="searchButton margin-right" placeholder='Quantity' ng-model="itemQuantity" required>
-		    </div>
-		    
-		    <button id="addItem" ng-click="addItem()">Add Item</button>
-		
-		    <div class="list">
-		      <table border="0" cellspacing="0">
-		        <tr class="table-header">
-		          <td class="left">Checked</td>
-		          <td class="left">Item Name</td>
-		          <td class="left">Expiration Date</td>
-		          <td>Quantity</td>
-		          <td class="center">Delete</td>
-		        </tr>
-		        <tr ng-repeat="item in list | orderBy: '-checked':true">
-		          <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
-		          <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
-		          <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
-		          <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
-		          <td class="center"><i class="fa fa-close" ng-click="remove(item)"></i></td>
-		        </tr>
-		      </table>
-		      <div ng-hide="list.length" class="center">Your shopping list is empty.</div>
-				<h1 ng-hide="list.length" class="center"> </h1>
-		      <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button>
-		    </div>
-		  </div>
-		  
-		  <div class="box" id="inventory">
-		    <h1>IFridge</h1>
-		    <div class="list">
-		      <table border="0" cellspacing="0">
-				  <tr class="table-header">
-					  <td>Item Name</td>
-					  <td class="left">Expiration Date</td>
-					  <td class="center">Quantity</td>
-					  <td class="center">Delete</td>
-				  </tr>
+    <div class="box margin-right" id="shopping-list">
+        <h1>My Shopping List</h1>
 
-		        <tr ng-repeat="item in inventory">
-		          <td class="left">{{item.name}}</td>
-		          <td class="left">{{item.shop}}</td>
-		          <td class="center">{{item.quantity}}</td>
-		          <td class="center"><i class="fa fa-trash" ng-click="removeInventory(item)"></i></td>
-		        </tr>
-		      </table>
-				<div ng-hide="inventory.length" class="center">Your inventory is empty.</div>
-				<h1 ng-hide="inventory.length" class="center"> </h1>
-		      <button class="clear" ng-click="clearAll(inventory)">Clear Inventory</button>
-		  </div>
-		  </div>
-		</div>
+        <div id="errorMessage"><i class="icon-cross"></i>Please enter all inputs!</div>
+
+        <div id="successMessage"><i class="icon-checkmark"></i>Item added to shopping list!</div>
+
+        <div class= "half margin-right">
+            <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
+        </div><div class="half"><input type='text'   class="searchButton" placeholder='Expiration Date (mm/dd/yyyy)' ng-model="itemShop" required></div>
+        <div class="half margin-right">
+            <input type='number' class="searchButton margin-right" placeholder='Quantity' ng-model="itemQuantity" required>
+        </div>
+
+        <button id="addItem" ng-click="addItem()">Add Item</button>
+
+        <div class="list">
+            <table border="0" cellspacing="0">
+                <tr class="table-header">
+                    <td class="left">Checked</td>
+                    <td class="left">Item Name</td>
+                    <td class="left">Expiration Date</td>
+                    <td>Quantity</td>
+                    <td class="center">Delete</td>
+                </tr>
+                <tr ng-repeat="item in list | orderBy: '-checked':true">
+                    <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
+                    <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+                    <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
+                    <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
+                    <td class="center"><i class="fa fa-trash" ng-click="remove(item)"></i></td>
+                </tr>
+            </table>
+            <div ng-hide="list.length" class="center">Your shopping list is empty.</div>
+            <h1 ng-hide="list.length" class="center"> </h1>
+            <button id="toFridge">Go to My Fridge!</button>
+            <h1> </h1>
+            <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button>
+        </div>
+    </div>
+
+    <div class="box" id="inventory">
+        <h1>IFridge</h1>
+        <div class="list">
+            <table border="0" cellspacing="0">
+                <tr class="table-header">
+                    <td>Item Name</td>
+                    <td class="left">Expiration Date</td>
+                    <td class="center">Quantity</td>
+                    <td class="center">Delete</td>
+                </tr>
+                <tr ng-repeat="item in inventory">
+                    <td class="left">{{item.name}}</td>
+                    <td class="left">{{item.shop}}</td>
+                    <td class="center">{{item.quantity}}</td>
+                    <td class="center"><i class="fa fa-trash" ng-click="removeInventory(item)"></i></td>
+                </tr>
+            </table>
+            <div ng-hide="inventory.length" class="center">Your inventory is empty.</div>
+            <h1 ng-hide="inventory.length" class="center"> </h1>
+            <button id="toShopping">Go to My Shopping List!</button>
+            <h1> </h1>
+            <button class="clear" ng-click="clearAll(inventory)">Clear Inventory</button>
+        </div>
+    </div>
+</div>
+
 
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 
-<script src="../public/js/virtualFridge.js"></script>
-<script src="../public/js/virtualFridgeAnimation.js"></script>
+<script src="js/virtualFridge.js"></script>
+<script src="js/virtualFridgeAnimation.js"></script>
 
 </html>
 

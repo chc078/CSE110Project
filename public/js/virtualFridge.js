@@ -18,7 +18,7 @@ shoppingList.controller("index", ["$scope", function ($scope){
     {name: 'Eggs', shop:'06/30/2016', quantity: 1, checked: true},
     {name: 'Chow Mein', shop:'06/30/2016', quantity: 1, checked: false},
     {name: 'Bacon', shop:'06/30/2016', quantity: 1, checked: false},
-    {name: 'Yoghurt', shop:'06/30/2016', quantity: 6, checked: false},
+    {name: 'Yogurt', shop:'06/30/2016', quantity: 6, checked: false},
     {name: 'Chocolate', shop:'06/30/2016', quantity: 6, checked: false}
   ];
   
