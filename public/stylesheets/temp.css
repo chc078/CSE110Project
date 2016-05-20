@@ -1,9 +1,6 @@
 html{
     /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;*/
-    /*background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
-    background: rgb(256, 256, 256);*/
-
-    background: url("http://digitalresult.com/wp-content/uploads/2016/01/kitchen-cooking-wallpapers-25.jpeg") no-repeat center center fixed;
+    background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,12 +8,45 @@ html{
     overflow: auto;
 }
 
+/* Placeholders */
+::-webkit-input-placeholder {
+    color: #ddd;  }
+:-moz-placeholder { /* Firefox 18- */
+    color: #ff5f3c;  }
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #ff5f3c;  }
+:-ms-input-placeholder {
+    color: #333;  }
 body{
     position: relative;
 }
+img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
 
+#login-button{
+    cursor: pointer;
+    position: relative;
+    top: -19vw;
+    left: 45vw;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    margin: auto;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background: rgba(30,30,30,.8);
+    overflow: hidden;
+    opacity: 1;
+    box-shadow: 10px 10px 30px #000;
+}
 
-/* header */
+/* Heading */
 #headers{
     overflow: visible;
 }
@@ -29,7 +59,6 @@ h1{
     color: #ddd;
     width: 20%;
     height: 45px;
-    display: inline-block;
     text-shadow: 3px 3px 10px #000;
     float: left;
 }
@@ -44,7 +73,7 @@ h1{
 
 input.search-bar{
     margin: 0 auto;
-    width: 70%;
+    width: 75%;
     height: 45px;
     padding: 0 20px;
     font-size: 1rem;
@@ -53,17 +82,27 @@ input.search-bar{
     float: left;
 }
 
+.search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -45px;
+}
+
 /* Inputs */
 #a,
 input.search-bar{
     font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
     position: relative;
-    width: 70%;
+    width: 80%;
     display: block;
-    margin: 5px 0px;
+    margin: 9px auto;
     font-size: 1.5vw;
     color: #fff;
+    padding: 1.25vw;
     border-radius: 1vw;
     border: none;
     background: rgba(3,3,3,.2);
@@ -81,129 +120,32 @@ input.search-bar:focus{
     background: rgba(3,3,3,.5);
 }
 
-
-/* row and column styling*/
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-left: 1px solid #ccc;
-    background: rgba(256, 256, 256, 0);
-
+button{
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
 }
 
-.col {
-    flex: 1 1 8%;
-    box-sizing: border-box;
-    padding: 0px 10px 0px 5px;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+/**
+ * Filters and Checkbox Styles
+ */
 
-}
-/*make closed bordered box*/
-#firstrow {
-    border-top: 1px solid #ccc;
-}
-
-/* nested grids */
-.row .row, .row.nested {
-    flex: 1 1 auto;
-    margin-top: -0.5em;
+#Filters{
+    padding: 2%;
+    padding-top: 1%;
+    width: 90%;
+    background: rgba(256, 256, 256, 1);
+    display: inline-block;
+    margin: auto;
 }
 
-/* full width grids */
-.row.wide-fit {
-    margin-left: -10px;
-    margin-right: -10px;
-}
+#container{
 
-/* center grids */
-.row.center {
-    justify-content: center;
-}
-
-.center .col {
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-/* columns widths */
-
-.col-span-1 {
-    flex-basis: 8.3333%;
-}
-
-.col-span-2 {
-    flex-basis: 16.6666%;
-}
-
-.col-span-3 {
-    flex-basis: 25%;
-}
-
-.col-span-4 {
-    flex-basis: 33.3333%;
-}
-
-.col-span-5 {
-    flex-basis: 41.6666%;
-}
-
-.col-span-6 {
-    flex-basis: 50%;
-}
-
-.col-span-7 {
-    flex-basis: 58.3333%;
-}
-
-.col-span-8 {
-    flex-basis: 66.6666%;
-}
-
-.col-span-9 {
-    flex-basis: 75%;
-}
-
-.col-span-10 {
-    flex-basis: 83.3333%;
-}
-
-.col-span-11 {
-    flex-basis: 91.6666%;
-}
-
-.col-span-12 {
-    flex-basis: 100%;
-}
-
-@media all and (max-width: 568px) {
-    .col-span-1,
-    .col-span-2,
-    .col-span-3,
-    .col-span-4,
-    .col-span-5 {
-        flex-basis: 50%;
-    }
-
-    .col-span-6,
-    .col-span-7,
-    .col-span-8,
-    .col-span-9,
-    .col-span-10,
-    .col-span-11 {
-        flex-basis: 100%;
-    }
-
-    .nested .col {
-        flex-basis: 100%;
-    }
 
 }
 
 
-/*clear button styling*/
-button.clear{
+button{
     vertical-align: top;
     border: 0;
     font-size: 16px;
@@ -211,11 +153,11 @@ button.clear{
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin: auto;
     display: block;
     outline: none;
     border: none;
-    padding: 0.8em;
+    padding: 1.1em;
     width: 100%;
     color: white;
     text-align: center;
@@ -235,62 +177,70 @@ button.clear:hover {
     border-bottom: 2px solid #2b3c4e;
 }
 
-/*filter portion*/
-#Filters{
-    display: block;
-    margin: auto;
-    padding: 2%;
-    width: 90%;
-    float: top;
-    background: rgba(256, 256, 256, 0.5);
 
 
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/*checkbox style*/
 
-input[type="checkbox"] {
+.cuisines, .meal-type {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    display: block;
+}
+
+
+h3{
+    padding-right: 20px;
+}
+
+input[type="checkbox"]{
     position: absolute;
     opacity: 0;
     z-index: -1;
+    color: #fff;
+    background: rgba(63, 17, 162, 1);
 }
+
 label {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-bottom: 0px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 80%;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    padding-right: 20px;
     line-height: 36px;
     cursor: pointer;
 }
 label::before {
     content: " ";
     position: absolute;
-    top: 10px;
+    top: 6px;
     left: 0;
     display: block;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #8e44ad;
+    width: 15px;
+    height: 15px;
     border-radius: 4px;
-    z-index: -1;
+    color: #fff;
+    border: 2px solid rgba(63, 17, 162, 1);
 }
-
 /* Checked */
 input[type="checkbox"]:checked + label{
-    padding-left: 8px;
+    padding-left: 40px;
     color: #fff;
 }
-input[type="checkbox"]:checked + label::before {
+
+input[type = 'checkbox']:checked + label::before{
     top: 0;
-    width: 90%;
-    height: 80%;
-    background: #8e44ad;
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 17, 162, 1);
 }
 /* Transition */
 label,
@@ -300,65 +250,183 @@ label::before {
     transition: .25s all ease;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.cuisines::-webkit-input-placeholder {
+    color: #999;
+}
+.filter > .label {
+    color: #999;
+}
+.filter.active > .label {
+    color: #000;
+}
+.filter--input {
+    border: 1px solid #ccc;
+    position: relative;
+}
+.meal-type{
+    border-top: 1px solid #ccc;
+}
+.filter--meal, h4{
+    display: inline;
+}
+.filter--meal{
+    display: inline-block;
+}
+.cuisines.icon--clear {
+    position: absolute;
+    top: 19px;
+    right: 0;
+    padding: 10px 14px;
+    display: none;
+    width: 14px;
+    height: 14px;
+    background: url('http://prototype-bp.laj.lv/icons/icon-clear@2x.png') no-repeat top left;
+    background-size: 14px 14px;
+    cursor: pointer;
+}
 input.cuisine[type=text], input.meal[type=text], input.calories[type=text], input.time[type=text] {
     outline: none;
-    position: relative;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
     border: none;
-    width: 50%;
-    display: inline-block;
-    font-size: 14px;
-    opacity: 0;
-
+    padding: 14px 10px 10px 50px;
 }
 
-/* icons */
-.icon{
-    position: relative;
-    display: inline-block;
+.icon--cuisine {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
     width: 24px;
     height: 21px;
-    vertical-align: middle;
-    margin: auto;
-
-}
-.icon--cuisine {
     background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-94-48.png') no-repeat top left;
     background-size: 24px 21px;
 }
 
 .icon--meal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 21px;
     background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-89-48.png') no-repeat top left;
     background-size: 24px 21px;
 }
 
 .icon--time {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 21px;
     background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-72-48.png') no-repeat top left;
     background-size: 24px 21px;
 }
 
 .icon--calorie {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
     background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-21-48.png') no-repeat top left;
     background-size: 24px 21px;
 }
+/* Mobile */
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+    .filter {
+        padding: 3px;
+        margin-bottom: 1em;
+        border-radius: 3px;
+    }
+    input.cuisine[type=text], input.meal[type=text] {
+        width: 100%;
+    }
+}
+/* Desktop */
+@media (min-width: 502px) {
+    .filters {
+        border: 1px solid #ccc;
 
-.c-slider, .t-slider {
+    }
+    .filters:before,
+    .filters:after {
+        content: "";
+        display: block;
+    }
+    .filters:after {
+        clear: both;
+    }
+    .filter {
+        padding: 0px;
+        float: left;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    input.cuisine[type=text], input.meal[type=text], input.calories[type=text], input.time[type=text] {
+        width: 170px;
+        font-size: 80%;
+    }
+}
+.sliders{
+    font-family: sans-serif;
+    padding: 0;
+    display: inline-block;
     width: 100%;
-    margin-top: 5px;
+
 }
 
+.c-filter, .t-filter{
+    width: 50%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
 
-/* the slider body and sliding thumb effects*/
+.c-filter{
+    border-left: none;
+}
+
+.t-filter{
+    border-right: none;
+}
+
+.icon--calorie, p, .c-filter, .c-slider{
+    display: inline-block;
+}
+
+.t-slider, .t-filter, .icon--time{
+    display: inline-block;
+
+}
+
+.c-slider, .t-slider {
+    width: 50%;
+    margin: 10px 50px 0 20px;
+    float: right;
+}
+
 .c-range, .t-range {
     -webkit-appearance: none;
+    width: calc(100% - (73px));
     height: 10px;
-    vertical-align: middle;
-    margin: auto;
-    width: 70%;
     border-radius: 5px;
     background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
 }
 .c-range::-webkit-slider-thumb, .t-range::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -377,14 +445,6 @@ input.cuisine[type=text], input.meal[type=text], input.calories[type=text], inpu
 .c-range:active::-webkit-slider-thumb, .t-range:active::-webkit-slider-thumb {
     background: #1abc9c;
 }
-
-.c-range::-moz-range-thumb:hover, .t-range::-moz-range-thumb:hover {
-    background: #1abc9c;
-}
-.c-range:active::-moz-range-thumb, .t-range:active::-moz-range-thumb {
-    background: #1abc9c;
-}
-
 .c-range::-moz-range-thumb, .t-range::-moz-range-thumb {
     width: 20px;
     height: 20px;
@@ -395,8 +455,13 @@ input.cuisine[type=text], input.meal[type=text], input.calories[type=text], inpu
     -webkit-transition: background .15s ease-in-out;
     transition: background .15s ease-in-out;
 }
+.c-range::-moz-range-thumb:hover, .t-range::-moz-range-thumb:hover {
+    background: #1abc9c;
+}
+.c-range:active::-moz-range-thumb, .t-range:active::-moz-range-thumb {
+    background: #1abc9c;
+}
 
-/* label on the side for slider values*/
 .c-value {
     display: inline-block;
     position: relative;
@@ -455,3 +520,8 @@ input::-moz-focus-outer {
     border: 0;
 
 }
+
+
+
+
+
