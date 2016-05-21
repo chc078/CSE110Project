@@ -1,4 +1,4 @@
-html{
+body{
     /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;*/
     /*background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
     background: rgb(256, 256, 256);*/
@@ -310,7 +310,7 @@ input.cuisine[type=text], input.meal[type=text], input.calories[type=text], inpu
     width: 50%;
     display: inline-block;
     font-size: 14px;
-    opacity: 0;
+    opacity: 1;
 
 }
 
