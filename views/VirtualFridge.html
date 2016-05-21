@@ -1,9 +1,9 @@
 <html ng-app="root">
 <head>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/styleVirtualFridge.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styleVirtualFridge.css">
 </head>
 
 <div>
@@ -16,15 +16,16 @@
     </div>
 </div>
 
-<div class="division" id="shopping-button">
-    <i class="fa fa-shopping-cart fa-5x" aria-hidden="true" id="cart"></i>
-    <h1>Shopping List</h1>
-</div>
+<div>
+    <div class="division" id="shopping-button">
+        <img class="icon icons8-Shopping-Cart-Loaded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAEC0lEQVRoQ92a/XEUMQzFXyoAKiBUAFQAVABUAKkAUgFQAaQCSAWBCoAKgAqACggVwPxu1jc6nbz+WO+FwX8lu7asZ0nPkvaOJL2V9FTl8UPSJ0mvJPF3z2Cf15IuJT2W9LVHyNyaI0l/OoSeSHrXuA4wHF4agHpQAeq6pHvTIXwu7dkLCLkog8Vqxh1JHyWhnB1YCDmA84M1zyQ9MutOJb0pWYiTflKjlZuD292qWHcs6UsAJi0F1N3pHwA/lPRcEoCiwZ5Zl8dCtYNN8H87iIP3MwJQEMvklEtLk/taa+TEns/FfAsgNvDWnBU+gbnvNINUeEZc9I6slVoBcdK4TxpzbhexZzoALEf83S4g+jB5AHFzzczNHmQrIGQSwFY4/u/pN3LPb871iC3WWVnI/zl5At6QYuWlpBcOfGilHkDe7XAhNkzD0zPPAYObeTbD4ljKgoroHIsCrmilHkBeYctSET3/nsDkLtHoACI6r7JSDyBO65cz/42JliN6jlzSh07kovagmF9lpR5ACGczG9BceNxlnp5bMoroPuQZMtIoWqkXUHSivRS8dB2xxV1ILF/2AvL0vVSpEes3cdcLCAU4mZsjNBko43QJoN4ccKD+e6LOlwAi77pwIs8KuR2umvJBiMRTeel9xI4ks2mcLQGEEF9LkaoANDe4XElWGVH5UXpv5ULj310Wf7IUEOxiT4gN52SWFC69t4A8hXOBHy8FFNE3z3JZAS6VCrRoXum9BUQMkw+msUlYlwJCIGb/F8YmWV0KCCA+a7gKcNtyYgQgXIja346IwXhfYrHSe2RAOn6/bSkxAlCUNUDfxIgfpaAvvUceCbDNGekEbaviEYDYxBd9uUq2pHDL+3RYO/Q/ClCUNVDn+O5MicVK76Fq26PYsU7pzmgJ7qhIa1nfO3ev6zTKQlHR16tk7Tp6D/Ye2qwbBQhZ9AZ8a4rizLpdicVy71HctpHZLyweRwKKsgbfum0Jehvs/moIrTPaQhF9+75AD6AoCfWdpq2bjrQQQqOiz/bPegCFSWimwT80hgB0iKIva53RLpfSEl/01bJW7TxaZtHnl+EslxTq+YBWC2bWOmtYCJlR0VercG5e6nfblnM4dzQpsImn71JZvhTszvo1AEVF3+xXt5GI1gCEfr7om/uWOhLPcNpOytn7Jj0DFDGAC6421rLQ2ncSh0Mut9eMWRPQ2qBCslkbEKCinsMIl7syQCgP86XfHiz5+p0OgnuJZsnBXc5awn7Kp3Qu/Qqldf5qqU/kTtGXt7k0JvpJQDHtWSv18YAiCk9zSg17L6v4+6JDkEJknaRodOqt81dPffyptirYOv/ggP47l+MEW0mhdf7WSoeIIZvfpa4nlF1D2y3zN/v8BbJtBmRuM5ZXAAAAAElFTkSuQmCC" id="cart">
+        <h1>Shopping List</h1>
+    </div>
 
-<div class="division" id="inventory-button">
-    <img class="icon icons8-Fridge w3-xxxlarge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAACDklEQVRoQ+1a7U3EMAx9NwEwATABMAEwCbABm8AGwCTABMAEwAYwAehJjRRy7flDbqpDzr8qie33ns+XNl7BNi4AXAM4tm1zr34FcAvgQWthpVy4C+CxI5A2LAI7B/AlxasF9LIgmIKBoE4iADHFbiRDneavANxv8qVRqFXnGcAlgI+ZQRwMwZ9WfkSVNIB+msAPO4ApLgnqvfG/MWYPIM2eSPFaQhNQy66JoUhpBlsm/5r0MRn8D4DOANwNQFhWn4JBmQiNUIhViNWIg6WcVTBydAdkcuhAarIfoZDJYQICTISlQgBaEnik3xlS6bMqEI7sGt3SXSGW7XIC5qF168t2lBJTdrortPWA5gYg2Q8/bUsO555PQNLrw9wKSPbDFdL8GUtBWeazyklsSQzl+5DEYDMvEfpnueb3IBmU5o3xry032U9AI6dtE4MOuUz2U6FUyJFjS1e5fGM1ita9KBjjMy9PQBJlJoYkY455k/+I/yFHjKYtCUiiy8SQZMwxb/KfKTdy9HGQbtoSrlB9EmAke5oWFVPI04vba/1vAGzTmRyalOO36rr5gc+8euzReMGrTr7il8Gmj/p5DZgGED/AlzvUIOLdZkJaY+idLSlH7jBiNr5pGqg0CjEc5i1TbSlQBMNUC2svKxwvkX5imtUJoFWo3tNWPc5F3NyF2PUAKjd2+wNKgom4uQux+wuR+pA16m8frQAAAABJRU5ErkJggg==" id="fridge">
-    <h1>Virtual Fridge</h1>
-
+    <div class="division" id="inventory-button">
+        <img class="icon icons8-Fridge w3-xxxlarge" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAACDklEQVRoQ+1a7U3EMAx9NwEwATABMAEwCbABm8AGwCTABMAEwAYwAehJjRRy7flDbqpDzr8qie33ns+XNl7BNi4AXAM4tm1zr34FcAvgQWthpVy4C+CxI5A2LAI7B/AlxasF9LIgmIKBoE4iADHFbiRDneavANxv8qVRqFXnGcAlgI+ZQRwMwZ9WfkSVNIB+msAPO4ApLgnqvfG/MWYPIM2eSPFaQhNQy66JoUhpBlsm/5r0MRn8D4DOANwNQFhWn4JBmQiNUIhViNWIg6WcVTBydAdkcuhAarIfoZDJYQICTISlQgBaEnik3xlS6bMqEI7sGt3SXSGW7XIC5qF168t2lBJTdrortPWA5gYg2Q8/bUsO555PQNLrw9wKSPbDFdL8GUtBWeazyklsSQzl+5DEYDMvEfpnueb3IBmU5o3xry032U9AI6dtE4MOuUz2U6FUyJFjS1e5fGM1ita9KBjjMy9PQBJlJoYkY455k/+I/yFHjKYtCUiiy8SQZMwxb/KfKTdy9HGQbtoSrlB9EmAke5oWFVPI04vba/1vAGzTmRyalOO36rr5gc+8euzReMGrTr7il8Gmj/p5DZgGED/AlzvUIOLdZkJaY+idLSlH7jBiNr5pGqg0CjEc5i1TbSlQBMNUC2svKxwvkX5imtUJoFWo3tNWPc5F3NyF2PUAKjd2+wNKgom4uQux+wuR+pA16m8frQAAAABJRU5ErkJggg==" id="fridge">
+        <h1>Virtual Fridge</h1>
+    </div>
 </div>
 
 <div class="container" ng-controller="index">

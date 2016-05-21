@@ -57,5 +57,13 @@ module.exports = function(passport){
 		res.render('VirtualFridge',{message: req.flash('message')});
 	});
 
+	router.get('/recipes', function(req, res){
+		res.render('myRecipes',{message: req.flash('message')});
+	});
+
+	router.get('/create', function(req, res){
+		res.render('createRecipe',{message: req.flash('message')});
+	});
+
 	return router;
 }

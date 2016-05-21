@@ -51,20 +51,12 @@ html, body {
   margin-right: 1%;
 }
 
-
-#shopping-button.h1 {
-  color: #3a3a3a;
-  position: relative;
-  padding-left: 5vw;
-  margin: 0 0;
-  font-family: 'Zapf Chancery', cursive;
-}
-
 h1 {
   color: #3a3a3a;
   text-align: center;
-  margin: 1em 0;
-  font-family: 'Zapf Chancery', cursive;
+  margin: 0 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 4vw;
 }
 
 table {
@@ -320,14 +312,24 @@ i.fa-home{
   clear: both;
 }
 
+#shopping-button{
+  width: 45%;
+  height: 4vw;
+}
+
 #cart{
+  width: 7vw;
+  height: 7vw;
+  cursor: pointer;
   position: relative;
   margin-left: 21vw;
+  margin-top: 2.5vw;
+  margin-bottom: 2.5vw;
 }
 
 #fridge{
-  width: 65px;
-  height: 65px;
+  width: 7vw;
+  height: 7vw;
   cursor: pointer;
   position: relative;
   margin-left: 21vw;
@@ -337,11 +339,11 @@ i.fa-home{
 
 #home{
   background-color: transparent;
-  width: 3%;
+  width:5%;
 }
 
 #back{
   background-color: transparent;
-  width: 3%;
+  width:5%;
 }
 

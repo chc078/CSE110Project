@@ -229,6 +229,24 @@ i.fa-floppy-o {
     font-size: 2.3em;
 }
 
+i.fa-home{
+    color: ghostwhite;
+}
+
+i.fa-arrow-left{
+    color: ghostwhite;
+}
+
+#home{
+    background-color: transparent;
+    width:5%;
+}
+
+#back{
+    background-color: transparent;
+    width:5%;
+}
+
 @media (max-width: 800px) {
     .box {
         width: 100%;
