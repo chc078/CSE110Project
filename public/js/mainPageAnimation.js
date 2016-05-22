@@ -33,6 +33,8 @@ $(".input-group").keypress(function(e) {
         xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+formData, false);
         xhr.send();
         var responseString=JSON.parse(xhr.responseText);
+        //ID can be used to GET the full recipe details.
+        //&requirePictures=true  // return recipes with photos
         //console.log(responseString);
         getMatches(responseString.matches);
     }
@@ -46,5 +48,11 @@ function getMatches(arr) {
         
     }
     console.log(document.getElementById("response"));
-    document.getElementById("response").innerHTML = out;
+    
+    document.open("~/views/SearchResults.jade"); //Replace??
+	document.write("<html><body><p>Hello World!</p></body></html>");
+	document.close();
+    
+    //document.getElementById("response").innerHTML = out;
+    window.location.href = "../../views/searchResults.jade";
 }
