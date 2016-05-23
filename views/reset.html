@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styleReset.css">
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+</head>
+<body>
+
+    <form id="passwordReset" method="POST">
+        <h1>Reset Password</h1>
+        <div class="form-group">
+            <label for="password"><h2>New Password</h2>></label>
+            <input id="password" type="password" name="password" value="" placeholder="New password" autofocus="autofocus" class="form-control"/>
+            <label for="confirm"><h2>Confirm Password</h2></label>
+            <input id="confirm" type="password" name="confirm" value="" placeholder="Confirm password" class="form-control"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="a">Update Password</button>
+        </div>
+    </form>
+
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger" id="message"><h1><%= message %></h1></div>
+    <% } %>
+
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="../js/reset.js" type="text/javascript"></script>
+</html>

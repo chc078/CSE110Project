@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var User = require('../models/user');
+var register = require('../passport/register');
+var bCrypt = require('bcrypt-nodejs');
+var Forget = require('../passport/forget');
+
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -63,6 +68,30 @@ module.exports = function(passport){
 
 	router.get('/create', function(req, res){
 		res.render('createRecipe',{message: req.flash('message')});
+	});
+
+
+	//handle forget password
+	router.post('/forgot', function(req, res, next) {
+		Forget.sendResetEmail(req, res, next);
+	});
+
+	router.get('/reset/:token', function(req, res) {
+		User.findOne({ $and: [{resetPasswordToken: req.params.token}, {resetPasswordExpire: { $gt: Date.now()} }] }, function(err, user) {
+			if (!user) {
+				req.flash('error', 'Password reset token is invalid or has expired.');
+				console.log(err);
+				console.log('user: '+user);
+				console.log(req.params.token);
+				return res.redirect('/');
+			}
+			res.render('reset', {message: req.flash('message')
+			});
+		});
+	});
+
+	router.post('/reset/:token', function(req, res) {
+		Forget.resetPost(req, res);
 	});
 
 	return router;

@@ -19,7 +19,7 @@ img{
 #login-button{
     cursor: pointer;
     position: relative;
-    top: -19vw;
+    top: -28vw;
     left: 45vw;
     right: 0;
     bottom: 0;
@@ -75,7 +75,7 @@ img{
 h1{
     font-family: 'Abril Fatface';
     position: relative;
-    margin-top: 0px;
+    margin-top: 9vw;
     text-align: center;
     font-size: 5vw;
     color: #ddd;

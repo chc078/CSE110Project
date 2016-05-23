@@ -4,6 +4,10 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
+var async = require('async');
+var crypto = require('crypto');
+var validator = require('express-validator');
 
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
@@ -19,32 +23,34 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 
+
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(validator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuring Passport
 var passport = require('passport');
 var expressSession = require('express-session');
-// TODO - Why Do we need this key ?
-app.use(expressSession({secret: 'mySecretKey'}));
+
+app.use(expressSession({secret: 'foodopia'}));
 app.use(passport.initialize());
 app.use(passport.session());
 
- // Using the flash middleware provided by connect-flash to store messages in session
- // and displaying in templates
+// Using the flash middleware provided by connect-flash to store messages in session
+// and displaying in templates
 var flash = require('connect-flash');
 app.use(flash());
 
-// Initialize Passport
+// Initialize Passport, set strategies
 var initPassport = require('./passport/init');
 initPassport(passport);
-
-var routes = require('./routes/index')(passport);
-app.use('/', routes);
+//initialize passport router
+var Routes = require('./routes/index')(passport);
+app.use('/', Routes);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

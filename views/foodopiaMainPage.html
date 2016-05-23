@@ -46,13 +46,17 @@
 
         <!-- Forgotten Password Container-->
         <div id="forgotten-container">
-            <h3>Forgotten</h3><span class="close-btn"><img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></span>
-            <form>
-                <input type="email" name="email" placeholder="E-mail"><a href="#" class="orange-btn">Get new password</a>
+            <h3>Forgotten</h3><span class="close-btn"><img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"/></span>
+            <form action="/forgot" method="POST">
+                <input type="text" name="email" placeholder="E-mail" autofocus="autofocus" required="required"/>
+                <button id="a" type="submit" class="button">Send password reset email</button>
             </form>
         </div>
-        <div id="message">
-        </div>
+
+        <% if (message.length > 0) { %>
+        <div class="alert alert-danger" id="message"><h1><%= message %></h1></div>
+        <% } %>
+
 
     </body>
 
