@@ -1,4 +1,5 @@
 var express = require('express');
+var app = express();
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -8,6 +9,7 @@ var nodemailer = require('nodemailer');
 var async = require('async');
 var crypto = require('crypto');
 var validator = require('express-validator');
+var session = require('express-session');
 
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
@@ -15,14 +17,10 @@ var mongoose = require('mongoose');
 //mongoose.connect(dbConfig.url);
 mongoose.connect('mongodb://CSE110ELF:cse110elf@ds015879.mlab.com:15879/usertest');
 
-var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-
-
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -31,6 +29,13 @@ app.use(bodyParser.urlencoded());
 app.use(validator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret:"abc", resave:false, saveUninitialized:true}));
+
+/** Angoose bootstraping */
+require("angoose").init(app, {
+    'module-dirs':'models',
+    'mongo-opts': 'localhost:27017/test',
+});
 
 // Configuring Passport
 var passport = require('passport');

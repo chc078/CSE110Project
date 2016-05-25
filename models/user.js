@@ -5,7 +5,18 @@ var userSchema = new mongoose.Schema({
    password: {type: String},
    email: {type: String, unique: true},
    resetPasswordToken: {type:String},
-   resetPasswordExpire: {type : Date}
+   resetPasswordExpire: {type : Date},
+   slist: [{
+      name: {type: String},
+      date: {type: String},
+      quantity: {type: Number},
+      checked: {type: Boolean}
+   }],
+   vfridge:[{
+      name: {type: String},
+      date: {type: String},
+      quantity: {type: Number}
+   }]
 });
 
 module.exports = mongoose.model('User', userSchema);

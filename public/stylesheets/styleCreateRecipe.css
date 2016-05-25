@@ -7,9 +7,12 @@
 html, body {
     background: url("http://wallpaper.zone/img/5429429.jpg") no-repeat center center fixed;
     background-size: cover;
-    overflow: scroll;
     height: 100%;
     padding: 1em;
+}
+
+html{
+    overflow: scroll;
 }
 
 .division{
@@ -48,7 +51,7 @@ html, body {
     width: 49%;
     background: rgba(210, 166, 121, 0.5);
     margin: 0 auto 2em auto;
-    overflow: auto;
+    overflow: hidden;
     padding: 0.7em;
     border-radius: 3px;
     display: inline-block;

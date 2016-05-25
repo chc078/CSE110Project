@@ -4,6 +4,7 @@
 $('#back-button').hide();
 $('#shopping-list').hide();
 $('#inventory').hide();
+$('#name').hide();
 
 $('#shopping-button').click(function(){
     $('#shopping-button').fadeOut(800);

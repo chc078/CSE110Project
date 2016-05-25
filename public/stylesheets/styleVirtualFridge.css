@@ -7,10 +7,13 @@
 html, body {
   background: url(http://www.commonground.coop/sites/default/files/vegetables%20wooden%20background-croppedx2.jpg) no-repeat center center fixed;
   background-size: cover;
-  overflow: scroll;
   height: 100%;
   padding: 1em;
 
+}
+
+html{
+  overflow: scroll;
 }
 
 .division{
@@ -46,6 +49,7 @@ html, body {
   border-radius: 3px;
   display: inline-block;
   vertical-align: top;
+  overflow: hidden;
 }
 .box:first-child {
   margin-right: 1%;

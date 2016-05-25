@@ -5,6 +5,7 @@ var User = require('../models/user');
 var register = require('../passport/register');
 var bCrypt = require('bcrypt-nodejs');
 var Forget = require('../passport/forget');
+var Storage = require('../controllers/manipulateStorage');
 
 
 var isAuthenticated = function (req, res, next) {
@@ -59,6 +60,11 @@ module.exports = function(passport){
 	});
 
 	router.get('/storage', function(req, res){
+		if (!req.session.user) {
+			res.status(401).send();
+			return res.redirect('/');
+		}
+		res.render('VirtualFridge',{user: req.user});
 		res.render('VirtualFridge',{message: req.flash('message')});
 	});
 
@@ -68,6 +74,10 @@ module.exports = function(passport){
 
 	router.get('/create', function(req, res){
 		res.render('createRecipe',{message: req.flash('message')});
+	});
+	
+	router.get('/profile', function(req, res){
+		res.render('profilePage', {message: req.flash('message')});
 	});
 
 
@@ -92,6 +102,10 @@ module.exports = function(passport){
 
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
+	});
+	
+	router.post('/removeItem', function(req, res) {
+		Storage.removeItem(req, res);
 	});
 
 	return router;
