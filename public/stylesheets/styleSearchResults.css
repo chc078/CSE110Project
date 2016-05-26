@@ -1,0 +1,537 @@
+body{
+    /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;*/
+    /*background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
+    background: rgb(256, 256, 256);*/
+
+    background: url("http://digitalresult.com/wp-content/uploads/2016/01/kitchen-cooking-wallpapers-25.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
+body{
+    position: relative;
+}
+
+
+/* header */
+#headers{
+    overflow: visible;
+}
+h1{
+    font-family: 'Abril Fatface';
+    position: relative;
+    margin: auto;
+    text-align: left;
+    font-size: 3vw;
+    color: #ddd;
+    width: 20%;
+    height: 45px;
+    display: inline-block;
+    text-shadow: 3px 3px 10px #000;
+    float: left;
+}
+.search-container{
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: visible;
+}
+
+input.search-bar{
+    margin: 0 auto;
+    width: 70%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+    float: left;
+}
+
+/* Inputs */
+#a,
+input.search-bar{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 70%;
+    display: block;
+    margin: 5px 0px;
+    font-size: 1.5vw;
+    color: #fff;
+    border-radius: 1vw;
+    border: none;
+    background: rgba(3,3,3,.2);
+    /*-webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;*/
+}
+
+
+
+input.search-bar:focus{
+    outline: none;
+    box-shadow: 3px 3px 10px #333;
+    background: rgba(3,3,3,.5);
+}
+
+
+/* row and column styling*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: 1px solid #ccc;
+    background: rgba(256, 256, 256, 0);
+
+}
+
+.col {
+    flex: 1 1 8%;
+    box-sizing: border-box;
+    padding: 0px 10px 0px 5px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+/*make closed bordered box*/
+#firstrow {
+    border-top: 1px solid #ccc;
+}
+
+/* nested grids */
+.row .row, .row.nested {
+    flex: 1 1 auto;
+    margin-top: -0.5em;
+}
+
+/* full width grids */
+.row.wide-fit {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* center grids */
+.row.center {
+    justify-content: center;
+}
+
+.center .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* columns widths */
+
+.col-span-1 {
+    flex-basis: 8.3333%;
+}
+
+.col-span-2 {
+    flex-basis: 16.6666%;
+}
+
+.col-span-3 {
+    flex-basis: 25%;
+}
+
+.col-span-4 {
+    flex-basis: 33.3333%;
+}
+
+.col-span-5 {
+    flex-basis: 41.6666%;
+}
+
+.col-span-6 {
+    flex-basis: 50%;
+}
+
+.col-span-7 {
+    flex-basis: 58.3333%;
+}
+
+.col-span-8 {
+    flex-basis: 66.6666%;
+}
+
+.col-span-9 {
+    flex-basis: 75%;
+}
+
+.col-span-10 {
+    flex-basis: 83.3333%;
+}
+
+.col-span-11 {
+    flex-basis: 91.6666%;
+}
+
+.col-span-12 {
+    flex-basis: 100%;
+}
+
+@media all and (max-width: 568px) {
+    .col-span-1,
+    .col-span-2,
+    .col-span-3,
+    .col-span-4,
+    .col-span-5 {
+        flex-basis: 50%;
+    }
+
+    .col-span-6,
+    .col-span-7,
+    .col-span-8,
+    .col-span-9,
+    .col-span-10,
+    .col-span-11 {
+        flex-basis: 100%;
+    }
+
+    .nested .col {
+        flex-basis: 100%;
+    }
+
+}
+
+button.clear{
+    margin-left: 300px;
+    width: 20%;
+    background: #3f5872;
+    border-bottom: 4px solid #2b3c4e;
+}
+
+button.search{
+    margin-left: 0;
+    width: 50%;
+    display: block;
+    outline: none;
+    background: #fb887c;
+    border: none;
+    padding: 1.1em;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 4px solid #fa7263;
+}
+/*clear button styling*/
+button.clear, button.search{
+    vertical-align: top;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    color: white;
+    text-align: center;
+}
+
+button:focus{
+    outline: 0 none;
+}
+
+button.clear:hover {
+    background: #384e65;
+    border-bottom: 2px solid #2b3c4e;
+}
+
+button.search:hover {
+    background: #fb887c;
+    border-bottom: 2px solid #fa7263;
+}
+
+/*filter portion*/
+#Filters{
+    display: block;
+    margin: auto;
+    padding: 2%;
+    width: 90%;
+    float: top;
+    background: rgba(256, 256, 256, 0.5);
+
+
+}
+
+/*checkbox style*/
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+label {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    line-height: 36px;
+    cursor: pointer;
+}
+label::before {
+    content: " ";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8e44ad;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+/* Checked */
+input[type="checkbox"]:checked + label{
+    padding-left: 8px;
+    color: #fff;
+}
+input[type="checkbox"]:checked + label::before {
+    top: 0;
+    width: 90%;
+    height: 80%;
+    background: #8e44ad;
+}
+/* Transition */
+label,
+label::before {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+input.cuisine[type=text], input.meal[type=text], input.calories[type=text], input.time[type=text] {
+    outline: none;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: none;
+    width: 50%;
+    display: inline-block;
+    font-size: 14px;
+    opacity: 1;
+    background: rgba(0,0,0,0);
+}
+
+input.cuisine[type=text]::-webkit-input-placeholder,
+input.meal[type=text]::-webkit-input-placeholder,
+input.calories[type=text]::-webkit-input-placeholder,
+input.time[type=text]::-webkit-input-placeholder {
+    color: rgba(100,100,100,1);
+}
+/* icons */
+.icon{
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    vertical-align: middle;
+    margin: auto;
+
+}
+.icon--cuisine {
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-94-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--meal {
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-89-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--time {
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-72-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--calorie {
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-21-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.c-slider, .t-slider {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* the slider body and sliding thumb effects*/
+.c-range, .t-range {
+    -webkit-appearance: none;
+    height: 10px;
+    vertical-align: middle;
+    margin: auto;
+    width: 70%;
+    border-radius: 5px;
+    background: #d7dcdf;
+}
+.c-range::-webkit-slider-thumb, .t-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.c-range::-webkit-slider-thumb:hover, .t-range::-webkit-slider-thumb:hover {
+    background: #1abc9c;
+}
+.c-range:active::-webkit-slider-thumb, .t-range:active::-webkit-slider-thumb {
+    background: #1abc9c;
+}
+
+.c-range::-moz-range-thumb:hover, .t-range::-moz-range-thumb:hover {
+    background: #1abc9c;
+}
+.c-range:active::-moz-range-thumb, .t-range:active::-moz-range-thumb {
+    background: #1abc9c;
+}
+
+.c-range::-moz-range-thumb, .t-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+/* label on the side for slider values*/
+.c-value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px;
+}
+.c-value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: '';
+}
+
+.t-value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px;
+}
+.t-value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: '';
+}
+
+::-moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+
+}
+
+
+.wrap {
+    overflow: hidden;
+    width: 90%;
+    margin: 30px auto;
+    padding: 0 20px 20px 20px;
+    background-color: rgba(32, 38, 52, 0.4);
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+}
+
+.box {
+    float: left;
+    position: relative;
+    width: 20%;
+    padding-bottom: 20%;
+
+}
+
+.boxInner {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    overflow: hidden;
+}
+
+.boxInner img {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+
+}
+
+.titleBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+
+    transition: all 0.3s ease-out;
+}
+
+body.no-touch .boxInner:hover .titleBox,
+body.touch .boxInner.touchFocus .titleBox {
+    margin-bottom: 0;
+}

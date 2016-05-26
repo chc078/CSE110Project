@@ -26,13 +26,14 @@ html(lang='en')
       form(class='form-signin', action='/login', method='POST')
         input(type='text', name='username' class='form-control', placeholder='Username',required, autofocus)
         input(type='password', name='password' class='form-control', placeholder='Password', required)
-        a(class='button' type='submit') Log in
-        #create-container
-          a(class='button',href='/signup') First time to Foodopia!
-        #remember-container
-          input#checkbox-2-1.checkbox(type='checkbox', checked='checked')
-          span#remember Remember me
-          span#forgotten Forgotten password
+
+        button#a(type='submit') Log in
+      #create-container
+        a(class='button', href='/signup') First time to Foodopia!
+      #remember-container
+        input#checkbox-2-1.checkbox(type='checkbox', checked='checked')
+        span#remember Remember me
+        span#forgotten Forgotten password
     // Forgotten Password Container
     #forgotten-container
       h3 Forgotten

@@ -23,6 +23,7 @@ $('#forgotten').click(function(){
         $("#forgotten-container").fadeIn();
     });
 });
+//<<<<<<< HEAD
 function getRecipe(id) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://api.yummly.com/v1/api/recipe/" + id + "?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc", false);
@@ -80,3 +81,13 @@ function getMatches(arr) {
     //document.getElementById("response").innerHTML = out;
     window.location.href = "../../views/searchResults.jade";*/
 }
+//=======
+
+$(document).click(function(){
+    $("#message").fadeOut();
+});
+
+$(document).keypress(function(){
+    $("#message").fadeOut();
+});
+//>>>>>>> origin/search_features

@@ -28,7 +28,7 @@ img{
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 50%;
-    background: rgba(3,3,3,.8);
+    background: rgba(30,30,30,.8);
     overflow: hidden;
     opacity: 1;
     box-shadow: 10px 10px 30px #000;}
@@ -103,6 +103,26 @@ h3{
 }
 
 /* Inputs */
+#a,
+input{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 9px auto;
+    font-size: 1.5vw;
+    color: #fff;
+    padding: 1.25vw;
+    border-radius: 1vw;
+    border: none;
+    background: rgba(3,3,3,.2);
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
 a,
 input{
     font-family: 'Open Sans Condensed', sans-serif;
@@ -140,6 +160,17 @@ input:focus{
     color: #333;  }
 
 /* Link */
+#a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 0.67vw 1.25vw;
+    background: rgba(107,255,3,0.3);
+}
+
+#a:hover{
+    opacity: 0.7;
+}
+
 a{
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
