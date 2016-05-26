@@ -1,10 +1,9 @@
 html {
-    background: url("http://pic.1fotonin.com/data/wallpapers/210/WDF_2475734.jpg") no-repeat center center fixed;
+    background: url("http://confectionsofacottonpickinqueen.com/wp-content/uploads/2014/06/Dollarphotoclub_540377071.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
 
@@ -75,6 +74,8 @@ h2{
 
 #senstive{
     text-align: center;
+    width:100%;
+    display: inline-block;
 }
 
 
@@ -100,7 +101,7 @@ h2{
 
 i{
     vertical-align: baseline;
-    margin: 2vw 3vw 1vw 5vw;
+    margin: 0 0 0 0 ;
     border-radius: 50%;
     padding: 0em;
     font-size: 0.8em;
@@ -158,5 +159,52 @@ input[type="checkbox"]{
   vertical-align: middle;
   position: relative;;
   bottom: 1px;
+}
+
+a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 9px auto;
+    font-size: 1.5vw;
+    color: #fff;
+    border-radius: 1vw;
+    border: none;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    padding: 0.67vw 1.25vw;
+    background: transparent;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+#home{
+    width:5%;
+    height: 5%;
+    color: black;
+}
+
+#back{
+    width:5%;
+    height: 5%;
+    color: black;
+}
+
+
+h3{
+    width: 100%;
+}
+
+#option{
+    display: inline-block;
+    width: 18%;
+
 }
 

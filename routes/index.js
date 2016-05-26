@@ -62,6 +62,7 @@ module.exports = function(passport){
 	router.get('/storage', function(req, res){
 		if (!req.session.user) {
 			res.status(401).send();
+			console.log('error');
 			return res.redirect('/');
 		}
 		res.render('VirtualFridge',{user: req.user});
@@ -103,9 +104,9 @@ module.exports = function(passport){
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
 	});
-	
-	router.post('/removeItem', function(req, res) {
-		Storage.removeItem(req, res);
+
+	router.post('/storage', function(req, res) {
+		Storage.removeItem(req, username, res);
 	});
 
 	return router;

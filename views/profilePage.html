@@ -16,7 +16,7 @@
     </div>
 
     <div class="box"  id="back">
-        <i class="fa fa-arrow-left fa-2x" aria-hidden="true" id="back-button"></i>
+        <a><i class="fa fa-arrow-left fa-2x" aria-hidden="true" id="back-button"></i></a>
     </div>
 </div>
 
@@ -30,20 +30,20 @@
 
 <div id="function-container">
     <div class="box" id="UserInfo">
-        <i class="fa fa-archive fa-5x" aria-hidden="true"></i>
-        <h2>UserInfo</h2>
+        <a><i class="fa fa-map-signs fa-5x" aria-hidden="true"></i></a>
+        <h2>User Info</h2>
     </div>
     <div class="box" id="Appetite">
-        <i class="fa fa-cutlery fa-5x" aria-hidden="true"></i>
+        <a><i class="fa fa-coffee fa-5x" aria-hidden="true"></i></a>
         <h2>Appetite</h2>
     </div>
     <div class="box" id="Allergy">
-        <i class="fa fa-book fa-5x" aria-hidden="true"></i>
+        <a><i class="fa fa-ambulance fa-5x" aria-hidden="true"></i></a>
         <h2>Allergy</h2>
     </div>
     <div class="box" id="alwaysInMyFridge">
-        <i class="fa fa-book fa-5x" aria-hidden="true"></i>
-        <h2>AlwaysInMyFidge</h2>
+        <a><i class="fa  fa-cart-arrow-down fa-5x" aria-hidden="true"></i></a>
+        <h2>Always In My Fridge</h2>
     </div>
 </div>
 
@@ -60,40 +60,40 @@
 <div id="taste">
     <h2 id="bitter" for="bitter">Bitter</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
 
     <br>
 
     <h2 id="salty" for="salty">Salty</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
     <br>
 
 
     <h2 id="sweet" for="sweet">Sweet</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
     <br>
 
     <h2 id="sour" for="sour">Sour</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
     <br>
 
 
     <h2 id="piqant" for="piquant">Piquant</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
     <br>
 
     <h2 id="meaty" for="meaty">Meaty</h2>
     <span id="range">0</span>
-    <input type="range" min="0" max="50" step="5" />
+    <input type="range" min="0" max="60" step="10" />
     <span id="range">6</span>
     <br>
 
@@ -103,58 +103,67 @@
 
 
 
-    <div id="senstive">
-        <input id="dairy" type="checkbox">
-        <h3 for="dairy">Dairy</h3>
-        <br><br><br>
+<div id="senstive">
+        <div id="option">
+            <input id="dairy" type="checkbox">
+            <h3 for="dairy">Dairy</h3>
+         </div>
 
-        <input id="egg" type="checkbox">
-        <h3 for="egg">Egg</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="egg" type="checkbox">
+            <h3 for="egg">Egg</h3>
+        </div>
 
-        <input id="gluten" type="checkbox">
-        <h3 for="gluten">Gluten</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="gluten" type="checkbox">
+            <h3 for="gluten">Gluten</h3>
+        </div>
 
-        <input id="peanut" type="checkbox">
-        <h3 for="peanut">Peanut</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="peanut" type="checkbox">
+            <h3 for="peanut">Peanut</h3>
+        </div>
 
-        <input id="seafood" type="checkbox">
-        <h3 for="seafood">Seafood</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="seafood" type="checkbox">
+            <h3 for="seafood">Seafood</h3>
+        </div>
+        <br><br><br><br>
 
-        <input id="sesame" type="checkbox">
-        <h3 for="sesame">Sesame</h3>
-        <br><br><br>
+        <div id="option">
 
-        <input id="soy" type="checkbox">
-        <h3 for="soy">Soy</h3>
-        <br><br><br>
+            <input id="sesame" type="checkbox">
+            <h3 for="sesame">Sesame</h3>
+        </div>
 
-        <input id="sulfite" type="checkbox">
-        <h3 for="sulfite">Sulfite</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="soy" type="checkbox">
+            <h3 for="soy">Soy</h3>
+        </div>
 
-        <input id="treenut" type="checkbox">
-        <h3 for="treenut">Tree Nut</h3>
-        <br><br><br>
+        <div id="option">
+            <input id="sulfite" type="checkbox">
+            <h3 for="sulfite">Sulfite</h3>
+        </div>
 
-        <input id="wheat" type="checkbox">
-        <h3 for="wheat">wheat</h3>
+        <div id="option">
+            <input id="treenut" type="checkbox">
+            <h3 for="treenut">Tree Nut</h3>
+        </div>
+
+        <div id="option">
+            <input id="wheat" type="checkbox">
+            <h3 for="wheat">wheat</h3>
+        </div>
         <br><br><br>
 
         <button type="button">Save</button>
-
-
-    </div>
+</div>
 
 </body>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-
+<script src="js/profilePageAnimation.js"></script>
 
 </html>
-
-<script src="js/profilePageAnimation.js"></script>

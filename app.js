@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded());
 app.use(validator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret:"abc", resave:false, saveUninitialized:true}));
+app.use(session({secret:"egfgidfkdslfhdsflufiqegfhewfgewjqfwcigfwugeuf", resave:false, saveUninitialized:true}));
 
 /** Angoose bootstraping */
 require("angoose").init(app, {
