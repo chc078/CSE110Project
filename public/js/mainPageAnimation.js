@@ -26,9 +26,11 @@ $('#forgotten').click(function(){
 
 $(".input-group").keypress(function(e) {
     var formData;
+    var unirest = require('unirest');
     if(e.which == 13) {
         formData = $(".input-group").find('input[name="name"]').val();
         console.log(formData);
+        /*
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+formData, false);
         xhr.send();
@@ -36,7 +38,10 @@ $(".input-group").keypress(function(e) {
         //ID can be used to GET the full recipe details.
         //&requirePictures=true  // return recipes with photos
         //console.log(responseString);
-        getMatches(responseString.matches);
+        getMatches(responseString.matches);*/
+        unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?&query"+formData).header("X-Mashape-Key","ps6oh8JkV7mshe8Kb0JRofZ8iUkxp18bMGwjsniAae2wPEU3us").end(function (result) {
+            console.log(result.status, result.headers, result.body);
+        });
     }
     
 });
