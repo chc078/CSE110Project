@@ -659,7 +659,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5747e0f419cca7230520e33e"
+					"_id": "5748b01c92df3bdc07bebac7"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -844,7 +844,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5747e0f419cca7230520e33f"
+					"_id": "5748b01c92df3bdc07bebac8"
 				},
 				"path": "vfridge",
 				"instance": "Array",

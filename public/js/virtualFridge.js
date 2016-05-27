@@ -2,15 +2,6 @@ var shoppingList = angular.module("root", ['angoose.client']);
 
 shoppingList.controller("index", function ($scope, User, $http) {
 
-//   $http({
-//     method : "POST",
-//     url : "/storage",
-//   }).then(function mySuccess(response) {
-//     $scope.item.name = response.data;
-//   }, function myError(response) {
-//     $scope.item.name = response.statusText;
-//   });
-
   $scope.itemName;
   $scope.itemShop;
   $scope.itemQuantity;
