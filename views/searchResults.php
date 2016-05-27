@@ -8,9 +8,9 @@
     <title>Recipe Results</title>
 </head>
 <div id="headers" class="headers">
-    <form class="search-container">
+    <form class="search-container" onsubmit="return false;">
         <h1>FOODOPIA</h1>
-        <input type="text" placeholder="Search for..." class="search-bar">
+        <input type="text" name='name' placeholder="Search for..." class="search-bar">
         <!--a(href='#')
         img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
         -->
@@ -132,6 +132,3 @@
 <script type="text/javascript" src="../public/js/resultsAmination.js"></script>
 
 </html>
-<?php
-    echo "<p>".$_POST['result']."</p><br>"; 
-?>

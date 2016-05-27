@@ -537,5 +537,6 @@ body.touch .boxInner.touchFocus .titleBox {
 }
 
 .response{
-    color: white;
+    color: red;
+    padding-left: 30px;     /*temporary value, I will leave this to front end to decide*/
 }
