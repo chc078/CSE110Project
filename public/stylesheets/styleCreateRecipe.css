@@ -70,6 +70,8 @@ h1 {
     size: 10vw;
     color: #ddd;
     text-shadow: 3px 3px 10px #000;
+    display: inline-block;
+    margin-left: 25%;
 }
 
 label {
@@ -240,14 +242,24 @@ i.fa-arrow-left{
     color: ghostwhite;
 }
 
+.redirectButton {
+    width: 8%;
+    display: inline-block;
+    height: 15%;
+}
+
+.box-btn {
+    display: inline-block;
+}
+
 #home{
     background-color: transparent;
-    width:5%;
+    width:45%;
 }
 
 #back{
     background-color: transparent;
-    width:5%;
+    width:45%;
 }
 
 @media (max-width: 800px) {

@@ -14,7 +14,7 @@ $('#ingredientPlusButton').click(function(){
 $('#ingredientMinusButton').click(function(){
 
     var count = $('#ingredientTable tr').length;
-    if (count > 2) {
+    if (count > 4) {
         $('#ingredientTable tr:last').remove();
     }
 
@@ -28,7 +28,7 @@ $('#procedurePlusButton').click(function(){
 $('#procedureMinusButton').click(function(){
 
     var rowCount = $('#procedureTable tr').length;
-    if (rowCount > 1) {
+    if (rowCount > 4) {
         $('#procedureTable tr:last').remove();
     }
 

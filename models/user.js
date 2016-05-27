@@ -8,13 +8,13 @@ var userSchema = new mongoose.Schema({
    resetPasswordExpire: {type : Date},
    slist: [{
       name: {type: String},
-      date: {type: String},
+      shop: {type: String},
       quantity: {type: Number},
       checked: {type: Boolean}
    }],
    vfridge:[{
       name: {type: String},
-      date: {type: String},
+      shop: {type: String},
       quantity: {type: Number}
    }]
 });

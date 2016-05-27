@@ -659,7 +659,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5746a56923f9b293750bc127"
+					"_id": "5747e0f419cca7230520e33e"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -671,7 +671,7 @@
 							"name": {
 								"type": "not-supported"
 							},
-							"date": {
+							"shop": {
 								"type": "not-supported"
 							},
 							"quantity": {
@@ -699,10 +699,10 @@
 							},
 							"_index": null
 						},
-						"date": {
+						"shop": {
 							"enumValues": [],
 							"regExp": null,
-							"path": "date",
+							"path": "shop",
 							"instance": "String",
 							"setters": [],
 							"getters": [],
@@ -785,7 +785,7 @@
 						"name": {
 							"type": "not-supported"
 						},
-						"date": {
+						"shop": {
 							"type": "not-supported"
 						},
 						"quantity": {
@@ -844,7 +844,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5746a56923f9b293750bc128"
+					"_id": "5747e0f419cca7230520e33f"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -856,7 +856,7 @@
 							"name": {
 								"type": "not-supported"
 							},
-							"date": {
+							"shop": {
 								"type": "not-supported"
 							},
 							"quantity": {
@@ -881,10 +881,10 @@
 							},
 							"_index": null
 						},
-						"date": {
+						"shop": {
 							"enumValues": [],
 							"regExp": null,
-							"path": "date",
+							"path": "shop",
 							"instance": "String",
 							"setters": [],
 							"getters": [],
@@ -957,7 +957,7 @@
 						"name": {
 							"type": "not-supported"
 						},
-						"date": {
+						"shop": {
 							"type": "not-supported"
 						},
 						"quantity": {

@@ -16,7 +16,7 @@ var isAuthenticated = function (req, res, next) {
 		return next();
 	// if the user is not authenticated then redirect him to the login page
 	res.redirect('/');
-}
+};
 
 module.exports = function(passport){
 
@@ -104,10 +104,11 @@ module.exports = function(passport){
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
 	});
-
-	router.post('/storage', function(req, res) {
-		Storage.removeItem(req, username, res);
-	});
+	/*
+	router.post('/storage', upload.array(), function(req, res, next) {
+		console.log(body);
+		res.json(req.body);
+	});*/
 
 	return router;
 }
