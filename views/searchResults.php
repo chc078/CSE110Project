@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <title>Recipe Results</title>
 </head>
-<>
 <div id="headers" class="headers">
     <form class="search-container">
         <h1>FOODOPIA</h1>
@@ -121,13 +120,18 @@
     </div>
 </div>
 <div class="response">
-    <ul id="response"></ul>
+    <?php
+        echo "<p>".$_POST['result']."</p><br>"; 
+    ?>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 
-<script type="text/javascript" src="../public/js/resultsAmination.php"></script>
+<script type="text/javascript" src="../public/js/resultsAmination.js"></script>
 
 </html>
+<?php
+    echo "<p>".$_POST['result']."</p><br>"; 
+?>

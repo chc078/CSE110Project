@@ -44,9 +44,9 @@ $(".input-group").keypress(function(e) {
         xhr.send();
         var responseString = JSON.parse(xhr.responseText);
 
-        $.post("data_result.php",responseString);
+        
         //$.get("searchResults.html");
-        //getMatches(responseString.matches);
+        getMatches(responseString.matches);
         //getRecipe("Vegetarian-Cabbage-Soup-Recipezaar");
     }
     
@@ -68,9 +68,7 @@ function getMatches(arr) {
         out += '<li>' + arr[i].recipeName + '</li><br>';
         
     }
-    $.redirect("./searchResults.html",out);
-
-    //window.location.href = "./searchResults.html";
+    $.redirect("./searchResults.php",{ result:out},"POST");    
 }
 
 

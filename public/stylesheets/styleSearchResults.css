@@ -535,3 +535,7 @@ body.no-touch .boxInner:hover .titleBox,
 body.touch .boxInner.touchFocus .titleBox {
     margin-bottom: 0;
 }
+
+.response{
+    color: white;
+}
