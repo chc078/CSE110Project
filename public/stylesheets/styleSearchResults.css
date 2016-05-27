@@ -535,3 +535,8 @@ body.no-touch .boxInner:hover .titleBox,
 body.touch .boxInner.touchFocus .titleBox {
     margin-bottom: 0;
 }
+
+.response{
+    color: red;
+    padding-left: 30px;     /*temporary value, I will leave this to front end to decide*/
+}

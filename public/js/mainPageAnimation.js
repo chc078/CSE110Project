@@ -40,13 +40,12 @@ $(".input-group").keypress(function(e) {
         console.log(formData);
         
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+ formData, false);
+        xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+ formData+"&requirePictures=true", false);
         xhr.send();
         var responseString = JSON.parse(xhr.responseText);
 
-        $.post("data_result.php",responseString);
-        //$.get("searchResults.html");
-        //getMatches(responseString.matches);
+        
+        getMatches(responseString.matches);
         //getRecipe("Vegetarian-Cabbage-Soup-Recipezaar");
     }
     
@@ -65,12 +64,10 @@ function getMatches(arr) {
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += '<li>' + arr[i].recipeName + '</li><br>';
+        out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
         
     }
-    $.redirect("./searchResults.html",out);
-
-    //window.location.href = "./searchResults.html";
+    $.redirect("./searchResults.php",{ result:out},"POST");    
 }
 
 
