@@ -1,5 +1,7 @@
+
 $( document ).ready(function() {
 	var search_query = window.location.hash.substring(1);
+	$(".search-container").find('input[name="name"]').val(search_query);
 	console.log(search_query);
 	if(search_query){
 		var xhr = new XMLHttpRequest();
@@ -22,58 +24,59 @@ $("#get_result").click(function(){
 
 function call_api(){
 	var formData;
-	var Cusines="&allowedCuisine[]=cuisine";
-	var Courses="&allowedCourse[]=course";
+	var Cusines="";
+	var Courses="";
 	var Calories="";
 	var Time_cost="";
 	if(document.getElementById('c1').checked) {
-		Cusines+="^cuisine-chinese"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-chinese"
 	}
 	if(document.getElementById('c2').checked) {
-		Cusines+="^cuisine-mexican"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-mexican"
 	}
 	if(document.getElementById('c3').checked) {
-		Cusines+="^cuisine-thai"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-thai"
 	}
 	if(document.getElementById('c4').checked) {
-		Cusines+="^cuisine-american"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-american"
 	}
 	if(document.getElementById('c5').checked) {
-		Cusines+="^cuisine-indian"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-indian"
 	}
 	if(document.getElementById('c6').checked){
-		Cusines+="^cuisine-kid-friendly^cuisine-italian^cuisine-asian^cuisine-southern^cuisine-french^cuisine-barbecue-bbq^cuisine-greek^cuisine-english^cuisine-spanish^cuisine-japanese"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-kid-friendly&allowedCuisine[]=cuisine^cuisine-italian&allowedCuisine[]=cuisine^cuisine-asian&allowedCuisine[]=cuisine^cuisine-southern&allowedCuisine[]=cuisine^cuisine-french&allowedCuisine[]=cuisine^cuisine-barbecue-bbq&allowedCuisine[]=cuisine^cuisine-greek&allowedCuisine[]=cuisine^cuisine-english&allowedCuisine[]=cuisine^cuisine-spanish&allowedCuisine[]=cuisine^cuisine-japanese"
 	}
 	//############################################
 	if(document.getElementById('m1').checked) {
-		Courses+="^course-Appetizers";
+		Courses+="&allowedCourse[]=course^course-Appetizers";
 	}
 	if(document.getElementById('m2').checked) {
-		Courses+="^course-Breakfast and Brunch"
+		Courses+="&allowedCourse[]=course^course-Breakfast and Brunch"
 	}
 	if(document.getElementById('m3').checked) {
-		Courses+="^course-Side Dishes"
+		Courses+="&allowedCourse[]=course^course-Side Dishes"
 	}
 	if(document.getElementById('m4').checked) {
-		Courses+="^course-Main Dishes"
+		Courses+="&allowedCourse[]=course^course-Main Dishes"
 	}
 	if(document.getElementById('m5').checked) {
-		Courses+="^course-Lunch"
+		Courses+="&allowedCourse[]=course^course-Lunch"
 	}
 	if(document.getElementById('m6').checked) {
-		Courses+="^course-Salads"
+		Courses+="&allowedCourse[]=course^course-Salads"
 	}
 	if(document.getElementById('m7').checked) {
-		Courses+="^course-Desserts";
+		Courses+="&allowedCourse[]=course^course-Desserts";
 	}
 	if(document.getElementById('m8').checked) {
-		Courses+="^course-Soups^course-Beverages^course-Condiments and Sauces^course-Cocktails";
+		Courses+="&allowedCourse[]=course^course-Soups&allowedCourse[]=course^course-Beverages&allowedCourse[]=course^course-Condiments and Sauces&allowedCourse[]=course^course-Cocktails";
 	}
 	
 
 	//############################################
 
 	formData = $(".search-container").find('input[name="name"]').val();
+	console.log(formData);
 	console.log(Cusines);
 	console.log(Courses);
 	
