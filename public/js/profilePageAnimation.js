@@ -4,7 +4,7 @@ $('#sensitive').hide();
 $('#basic').hide();
 $('#alwaysInFridge').hide();
 $('#back-button').hide();
-$('#name').hide();
+
 
 
 $('#UserInfo').click(function(){

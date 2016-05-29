@@ -92,6 +92,12 @@ module.exports = function(passport){
 		res.render('profilePage', {message: req.flash('message')});
 	});
 
+	/* GET recipe page. */
+	router.get('/individualRecipe', function(req, res) {
+		// Display the Login page with any flash message, if any
+		res.render('individualRecipes', { message: req.flash('message') });
+	});
+
 
 	//handle forget password
 	router.post('/forgot', function(req, res, next) {

@@ -14,17 +14,6 @@ shoppingList.controller("index", function ($scope, User, $http) {
 
   $scope.user = User.$get({'username': myName});
 
-
-
-  $http({
-    method: 'POST',
-    url: '/storage'
-  }).then(function successCallback(response) {
-    console.log("Delete successfully");
-  }, function errorCallback(response) {
-    console.log("FAILURE");
-  });
-
   $scope.remove = function(item) {
     var index = $scope.user.slist.indexOf(item);    //remove an item from shopping list
     $scope.user.slist.splice(index, 1);
@@ -51,7 +40,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
 
 
   $scope.addItem = function() {
-    if($scope.itemName && $scope.itemQuantity && $scope.itemShop){
+    if($scope.itemName && $scope.itemQuantity){
 
       $scope.user.slist.push({"name":$scope.itemName, "shop":$scope.itemShop, "quantity": $scope.itemQuantity, "checked": false});
 
