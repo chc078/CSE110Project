@@ -39,14 +39,27 @@ module.exports = function(passport){
 		failureFlash : true  
 	}));
 
-	/* GET login page. */
+	/* GET results page. */
 	router.get('/results', function(req, res) {
 		// Display the Login page with any flash message, if any
 		res.render('searchResults', { message: req.flash('message') });
 	});
 
-	/* Handle Login POST */
+	/* Handle results POST */
 	router.post('/results', passport.authenticate('login', {
+		successRedirect: '/home',
+		failureRedirect: '/',
+		failureFlash : true
+	}));
+
+	/* GET recipe page. */
+	router.get('/individualRecipe', function(req, res) {
+		// Display the Login page with any flash message, if any
+		res.render('individualRecipes', { message: req.flash('message') });
+	});
+
+	/* Handle recipe POST */
+	router.post('/individualRecipe', passport.authenticate('login', {
 		successRedirect: '/home',
 		failureRedirect: '/',
 		failureFlash : true
