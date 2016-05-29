@@ -12,7 +12,7 @@ $('#login-button').click(function(){
 $(".close-btn").click(function(){
     TweenMax.from("#container", .4, { scale: 1, ease:Sine.easeInOut});
     TweenMax.to("#container", .4, { left:"0px", scale: 0, ease:Sine.easeInOut});
-    $("#container, #forgotten-container").fadeOut(800, function(){
+    $("#container, #forgotten-container, #signup-container").fadeOut(800, function(){
         $("#login-button").fadeIn(800);
     });
 });
@@ -21,5 +21,19 @@ $(".close-btn").click(function(){
 $('#forgotten').click(function(){
     $("#container").fadeOut(function(){
         $("#forgotten-container").fadeIn();
+    });
+});
+
+$(document).click(function(){
+    $("#message").fadeOut();
+});
+
+$(document).keypress(function(){
+    $("#message").fadeOut();
+});
+
+$('#register').click(function(){
+    $('#container').fadeOut("slow",function(){
+        $("#signup-container").fadeIn();
     });
 });

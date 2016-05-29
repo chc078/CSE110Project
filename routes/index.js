@@ -1,6 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var User = require('../models/user');
+var register = require('../passport/register');
+var bCrypt = require('bcrypt-nodejs');
+var Forget = require('../passport/forget');
+var Storage = require('../controllers/manipulateStorage');
+
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
@@ -10,14 +16,17 @@ var isAuthenticated = function (req, res, next) {
 		return next();
 	// if the user is not authenticated then redirect him to the login page
 	res.redirect('/');
-}
+};
 
 module.exports = function(passport){
 
 	/* GET login page. */
 	router.get('/', function(req, res) {
     	// Display the Login page with any flash message, if any
-		res.render('foodopiaMainPage', { message: req.flash('message') });
+		if (req.user)
+			res.redirect('home', { message: req.flash('message') }, {user: req.user});
+		else
+			res.render('foodopiaMainPage', { message: req.flash('message') });
 	});
 
 	/* Handle Login POST */
@@ -50,5 +59,58 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
+	router.get('/storage', function(req, res){
+		if (!req.session.user) {
+			res.status(401).send();
+			console.log('error');
+			return res.redirect('/');
+		}
+		console.log('')
+		res.render('VirtualFridge',{user: req.user});
+		res.render('VirtualFridge',{message: req.flash('message')});
+	});
+
+	router.get('/recipes', function(req, res){
+		res.render('myRecipes',{message: req.flash('message')});
+	});
+
+	router.get('/create', function(req, res){
+		res.render('createRecipe',{message: req.flash('message')});
+	});
+	
+	router.get('/profile', function(req, res){
+		if (!req.session.user) {
+			res.status(401).send();
+			console.log('error');
+			return res.redirect('/');
+		}
+		res.render('profilePage',{user: req.user});
+		res.render('profilePage', {message: req.flash('message')});
+	});
+
+
+	//handle forget password
+	router.post('/forgot', function(req, res, next) {
+		Forget.sendResetEmail(req, res, next);
+	});
+
+	router.get('/reset/:token', function(req, res) {
+		User.findOne({ $and: [{resetPasswordToken: req.params.token}, {resetPasswordExpire: { $gt: Date.now()} }] }, function(err, user) {
+			if (!user) {
+				req.flash('error', 'Password reset token is invalid or has expired.');
+				console.log(err);
+				console.log('user: '+user);
+				console.log(req.params.token);
+				return res.redirect('/');
+			}
+			res.render('reset', {message: req.flash('message')
+			});
+		});
+	});
+
+	router.post('/reset/:token', function(req, res) {
+		Forget.resetPost(req, res);
+	});
+
 	return router;
-}
+};

@@ -1,7 +1,26 @@
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('User',{
-   username: String,
-   password: String,
-   email:String     
+var userSchema = new mongoose.Schema({
+   username: { type: String, unique: true},
+   password: {type: String},
+   email: {type: String, unique: true},
+   resetPasswordToken: {type:String},
+   resetPasswordExpire: {type : Date},
+   slist: [{
+      name: {type: String},
+      shop: {type: String},
+      quantity: {type: Number},
+      checked: {type: Boolean}
+   }],
+   vfridge:[{
+      name: {type: String},
+      shop: {type: String},
+      quantity: {type: Number}
+   }],
+   always:[{
+      name: {type: String},
+      quantity: {type: Number}
+   }]
 });
+
+module.exports = mongoose.model('User', userSchema);
