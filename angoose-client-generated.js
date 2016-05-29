@@ -659,7 +659,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5748b01c92df3bdc07bebac7"
+					"_id": "5749e40c18f92ce70b8273d8"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -844,7 +844,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5748b01c92df3bdc07bebac8"
+					"_id": "5749e40c18f92ce70b8273d9"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -958,6 +958,157 @@
 							"type": "not-supported"
 						},
 						"shop": {
+							"type": "not-supported"
+						},
+						"quantity": {
+							"type": "not-supported"
+						},
+						"_id": {
+							"type": "not-supported",
+							"auto": true
+						},
+						"id": {
+							"path": "id",
+							"getters": [
+								"not-supported"
+							],
+							"setters": [],
+							"options": {}
+						}
+					},
+					"_requiredpaths": [],
+					"s": {
+						"hooks": {
+							"_pres": {},
+							"_posts": {}
+						},
+						"queryHooks": {
+							"count": true,
+							"find": true,
+							"findOne": true,
+							"findOneAndUpdate": true,
+							"findOneAndRemove": true,
+							"update": true
+						}
+					},
+					"options": {
+						"minimize": true,
+						"typeKey": "type",
+						"id": true,
+						"noVirtualId": false,
+						"_id": true,
+						"noId": false,
+						"validateBeforeSave": true,
+						"read": null,
+						"shardKey": null,
+						"autoIndex": null,
+						"discriminatorKey": "__t",
+						"versionKey": "__v",
+						"capped": false,
+						"bufferCommands": true,
+						"strict": true
+					}
+				}
+			},
+			"always": {
+				"casterConstructor": "not-supported",
+				"caster": {
+					"_id": "5749e40c18f92ce70b8273da"
+				},
+				"path": "always",
+				"instance": "Array",
+				"setters": [],
+				"getters": [],
+				"options": {
+					"type": [
+						{
+							"name": {
+								"type": "not-supported"
+							},
+							"quantity": {
+								"type": "not-supported"
+							}
+						}
+					]
+				},
+				"_index": null,
+				"defaultValue": "not-supported",
+				"schema": {
+					"paths": {
+						"name": {
+							"enumValues": [],
+							"regExp": null,
+							"path": "name",
+							"instance": "String",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": "String"
+							},
+							"_index": null
+						},
+						"quantity": {
+							"path": "quantity",
+							"instance": "Number",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": "Number"
+							},
+							"_index": null
+						},
+						"_id": {
+							"path": "_id",
+							"instance": "ObjectID",
+							"setters": [
+								"not-supported"
+							],
+							"getters": [],
+							"options": {
+								"auto": true,
+								"type": "ObjectId"
+							},
+							"_index": null,
+							"defaultValue": "not-supported"
+						}
+					},
+					"subpaths": {},
+					"virtuals": {
+						"id": {
+							"path": "id",
+							"getters": [
+								"not-supported"
+							],
+							"setters": [],
+							"options": {}
+						}
+					},
+					"singleNestedPaths": {},
+					"nested": {},
+					"inherits": {},
+					"callQueue": [
+						[
+							"pre",
+							{
+								"0": "save",
+								"1": false,
+								"2": "not-supported"
+							}
+						],
+						[
+							"pre",
+							{
+								"0": "save",
+								"1": true,
+								"2": "not-supported"
+							}
+						]
+					],
+					"_indexes": [],
+					"methods": {},
+					"statics": {},
+					"tree": {
+						"name": {
 							"type": "not-supported"
 						},
 						"quantity": {

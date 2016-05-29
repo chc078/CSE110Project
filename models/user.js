@@ -16,6 +16,10 @@ var userSchema = new mongoose.Schema({
       name: {type: String},
       shop: {type: String},
       quantity: {type: Number}
+   }],
+   always:[{
+      name: {type: String},
+      quantity: {type: Number}
    }]
 });
 

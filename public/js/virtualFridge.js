@@ -29,13 +29,13 @@ shoppingList.controller("index", function ($scope, User, $http) {
     var index = $scope.user.slist.indexOf(item);    //remove an item from shopping list
     $scope.user.slist.splice(index, 1);
     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
-  }
+  };
 
   $scope.removeInventory = function(item) {
     var index = $scope.user.vfridge.indexOf(item);   //remove an item from vfridge
     $scope.user.vfridge.splice(index, 1);
     User.update({username: $scope.user.username},{"vfridge":$scope.user.vfridge});
-  }
+  };
 
   $scope.shoppingClearAll = function(list){
     var length = $scope.user.slist.length;    //clear shopping list

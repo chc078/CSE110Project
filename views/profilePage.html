@@ -3,12 +3,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface">
     <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/styleProfilePage.css">
+
     <meta charset="UTF-8">
 </head>
 
-<body>
+<body ng-app="profile">
 
 <div>
     <div class="box" id="home">
@@ -19,8 +21,6 @@
         <a><i class="fa fa-arrow-left fa-2x" aria-hidden="true" id="back-button"></i></a>
     </div>
 </div>
-
-
 
 <div id="header">
     <h1>Profile</h1>
@@ -49,10 +49,11 @@
 
 
 
-<div id="basic"> 
-    <h2 id="orange">User Name: <br><br><br><br><br>
-    My Favorite Recipe: <br><br><br><br><br>
-    My Own Recipe: </h2>
+<div id="basic">
+    <h2 id="orange">User Name: </h2><br><br>
+    <h1 id="name"><%= user.username %></h1>
+    <h2 id="orange">My Favorite Recipe: </h2><br><br><br><br><br>
+    <h2 id="orange">My Own Recipe: </h2>
 </div>
 
 
@@ -103,7 +104,7 @@
 
 
 
-<div id="senstive">
+<div id="sensitive">
         <div id="option">
             <input id="dairy" type="checkbox">
             <h3 for="dairy">Dairy</h3>
@@ -160,10 +161,48 @@
         <button type="button">Save</button>
 </div>
 
+<div class="alwaysContainer" ng-controller="habit">
+    <div id="alwaysInFridge">
+
+        <div id="errorMessage"><i class="icon-cross"></i>Please enter all inputs!</div>
+
+        <div id="successMessage"><i class="icon-checkmark"></i>Item added to shopping list!</div>
+
+        <div class= "half margin-right">
+            <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
+        </div><div class="half"><input type='number'   class="searchButton" placeholder='Quantity' ng-model="itemQuantity" required></div>
+
+        <button class="addItem" ng-click="addItem()">Add Item</button>
+
+        <div class="list">
+            <table border="0" cellspacing="0">
+                <tr class="table-header">
+                    <td class="left">Item Name</td>
+                    <td class="center">Quantity</td>
+                    <td class="center">Delete</td>
+                </tr>
+                <tr ng-repeat="item in user.always | orderBy: '-checked':true">
+                    <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+                    <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
+                    <td class="center"><i class="fa fa-trash" ng-click="remove(item)"></i></td>
+                </tr>
+            </table>
+            <div ng-hide="user.always.length" class="center">You don't have things always in your fridge now!</div>
+            <h1 ng-hide="user.always.length" class="center"> </h1>
+            <h1> </h1>
+            <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button>
+        </div>
+    </div>
+</div>
+
 </body>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="js/profilePageAnimation.js"></script>
+
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
+<script src="/angoose/angoose-client.js"></script>
+<script src="js/profilePage.js"></script>
 
 </html>

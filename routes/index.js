@@ -65,6 +65,7 @@ module.exports = function(passport){
 			console.log('error');
 			return res.redirect('/');
 		}
+		console.log('')
 		res.render('VirtualFridge',{user: req.user});
 		res.render('VirtualFridge',{message: req.flash('message')});
 	});
@@ -78,6 +79,12 @@ module.exports = function(passport){
 	});
 	
 	router.get('/profile', function(req, res){
+		if (!req.session.user) {
+			res.status(401).send();
+			console.log('error');
+			return res.redirect('/');
+		}
+		res.render('profilePage',{user: req.user});
 		res.render('profilePage', {message: req.flash('message')});
 	});
 
@@ -104,11 +111,6 @@ module.exports = function(passport){
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
 	});
-	/*
-	router.post('/storage', upload.array(), function(req, res, next) {
-		console.log(body);
-		res.json(req.body);
-	});*/
 
 	return router;
-}
+};
