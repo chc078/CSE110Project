@@ -106,7 +106,7 @@ function getMatches(arr) {
 	var out = "";
 	var i;
 	for(i = 0; i < arr.length; i++) {
-		out += '<div class="box">' + '<div class="boxInner">' + '<img src=' + arr[i].smallImageUrls[0] +'>'+
+		out += '<div class="box">' + '<div class="boxInner">' + '<a href="/individual"><img src=' + arr[i].smallImageUrls[0] +'></a>'+
 			'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
 		//out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
 	}

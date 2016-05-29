@@ -76,5 +76,9 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
+	router.get('/individual', function(req, res){
+		res.render('individualRecipes', {message: req.flash('message')});
+	});
+
 	return router;
 }
