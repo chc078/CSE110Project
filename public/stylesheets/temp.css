@@ -1,0 +1,527 @@
+html{
+    /*background: url("http://i.huffpost.com/gen/2745340/images/o-ORGANIC-facebook.jpg") no-repeat center center fixed;*/
+    background: url("https://wallpaperscraft.com/image/wood_background_texture_36573_1920x1080.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
+/* Placeholders */
+::-webkit-input-placeholder {
+    color: #ddd;  }
+:-moz-placeholder { /* Firefox 18- */
+    color: #ff5f3c;  }
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #ff5f3c;  }
+:-ms-input-placeholder {
+    color: #333;  }
+body{
+    position: relative;
+}
+img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+#login-button{
+    cursor: pointer;
+    position: relative;
+    top: -19vw;
+    left: 45vw;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    margin: auto;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background: rgba(30,30,30,.8);
+    overflow: hidden;
+    opacity: 1;
+    box-shadow: 10px 10px 30px #000;
+}
+
+/* Heading */
+#headers{
+    overflow: visible;
+}
+h1{
+    font-family: 'Abril Fatface';
+    position: relative;
+    margin: auto;
+    text-align: left;
+    font-size: 3vw;
+    color: #ddd;
+    width: 20%;
+    height: 45px;
+    text-shadow: 3px 3px 10px #000;
+    float: left;
+}
+.search-container{
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: visible;
+}
+
+input.search-bar{
+    margin: 0 auto;
+    width: 75%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+    float: left;
+}
+
+.search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -45px;
+}
+
+/* Inputs */
+#a,
+input.search-bar{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 9px auto;
+    font-size: 1.5vw;
+    color: #fff;
+    padding: 1.25vw;
+    border-radius: 1vw;
+    border: none;
+    background: rgba(3,3,3,.2);
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+input.search-bar:focus{
+    outline: none;
+    box-shadow: 3px 3px 10px #333;
+    background: rgba(3,3,3,.5);
+}
+
+button{
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Filters and Checkbox Styles
+ */
+
+#Filters{
+    padding: 2%;
+    padding-top: 1%;
+    width: 90%;
+    background: rgba(256, 256, 256, 1);
+    display: inline-block;
+    margin: auto;
+}
+
+#container{
+
+
+}
+
+
+button{
+    vertical-align: top;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 1.1em;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+button:focus{
+    outline: 0 none;
+}
+
+button.clear {
+    background: #3f5872;
+    border-bottom: 4px solid #2b3c4e;
+}
+
+button.clear:hover {
+    background: #384e65;
+    border-bottom: 2px solid #2b3c4e;
+}
+
+
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.cuisines, .meal-type {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    display: block;
+}
+
+
+h3{
+    padding-right: 20px;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    color: #fff;
+    background: rgba(63, 17, 162, 1);
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 80%;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    padding-right: 20px;
+    line-height: 36px;
+    cursor: pointer;
+}
+label::before {
+    content: " ";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    color: #fff;
+    border: 2px solid rgba(63, 17, 162, 1);
+}
+/* Checked */
+input[type="checkbox"]:checked + label{
+    padding-left: 40px;
+    color: #fff;
+}
+
+input[type = 'checkbox']:checked + label::before{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 17, 162, 1);
+}
+/* Transition */
+label,
+label::before {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cuisines::-webkit-input-placeholder {
+    color: #999;
+}
+.filter > .label {
+    color: #999;
+}
+.filter.active > .label {
+    color: #000;
+}
+.filter--input {
+    border: 1px solid #ccc;
+    position: relative;
+}
+.meal-type{
+    border-top: 1px solid #ccc;
+}
+.filter--meal, h4{
+    display: inline;
+}
+.filter--meal{
+    display: inline-block;
+}
+.cuisines.icon--clear {
+    position: absolute;
+    top: 19px;
+    right: 0;
+    padding: 10px 14px;
+    display: none;
+    width: 14px;
+    height: 14px;
+    background: url('http://prototype-bp.laj.lv/icons/icon-clear@2x.png') no-repeat top left;
+    background-size: 14px 14px;
+    cursor: pointer;
+}
+input.cuisine[type=text], input.meal[type=text], input.calories[type=text], input.time[type=text] {
+    outline: none;
+    border: none;
+    padding: 14px 10px 10px 50px;
+}
+
+.icon--cuisine {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 21px;
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-94-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--meal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 21px;
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-89-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--time {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 21px;
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-72-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+
+.icon--calorie {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-21-48.png') no-repeat top left;
+    background-size: 24px 21px;
+}
+/* Mobile */
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+    .filter {
+        padding: 3px;
+        margin-bottom: 1em;
+        border-radius: 3px;
+    }
+    input.cuisine[type=text], input.meal[type=text] {
+        width: 100%;
+    }
+}
+/* Desktop */
+@media (min-width: 502px) {
+    .filters {
+        border: 1px solid #ccc;
+
+    }
+    .filters:before,
+    .filters:after {
+        content: "";
+        display: block;
+    }
+    .filters:after {
+        clear: both;
+    }
+    .filter {
+        padding: 0px;
+        float: left;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    input.cuisine[type=text], input.meal[type=text], input.calories[type=text], input.time[type=text] {
+        width: 170px;
+        font-size: 80%;
+    }
+}
+.sliders{
+    font-family: sans-serif;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.c-filter, .t-filter{
+    width: 50%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.c-filter{
+    border-left: none;
+}
+
+.t-filter{
+    border-right: none;
+}
+
+.icon--calorie, p, .c-filter, .c-slider{
+    display: inline-block;
+}
+
+.t-slider, .t-filter, .icon--time{
+    display: inline-block;
+
+}
+
+.c-slider, .t-slider {
+    width: 50%;
+    margin: 10px 50px 0 20px;
+    float: right;
+}
+
+.c-range, .t-range {
+    -webkit-appearance: none;
+    width: calc(100% - (73px));
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.c-range::-webkit-slider-thumb, .t-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.c-range::-webkit-slider-thumb:hover, .t-range::-webkit-slider-thumb:hover {
+    background: #1abc9c;
+}
+.c-range:active::-webkit-slider-thumb, .t-range:active::-webkit-slider-thumb {
+    background: #1abc9c;
+}
+.c-range::-moz-range-thumb, .t-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.c-range::-moz-range-thumb:hover, .t-range::-moz-range-thumb:hover {
+    background: #1abc9c;
+}
+.c-range:active::-moz-range-thumb, .t-range:active::-moz-range-thumb {
+    background: #1abc9c;
+}
+
+.c-value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px;
+}
+.c-value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: '';
+}
+
+.t-value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px;
+}
+.t-value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: '';
+}
+
+::-moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+
+}
+
+
+
+
+
