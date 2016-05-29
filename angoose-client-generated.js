@@ -659,7 +659,11 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
+<<<<<<< HEAD
 					"_id": "574b45d2018538a40fa78ca8"
+=======
+					"_id": "574b3e14122956b0377ebb68"
+>>>>>>> 12ab47b8f540fe4e31663bb29454cc74e2a080ce
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -844,7 +848,11 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
+<<<<<<< HEAD
 					"_id": "574b45d2018538a40fa78ca9"
+=======
+					"_id": "574b3e14122956b0377ebb69"
+>>>>>>> 12ab47b8f540fe4e31663bb29454cc74e2a080ce
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -1013,7 +1021,11 @@
 			"always": {
 				"casterConstructor": "not-supported",
 				"caster": {
+<<<<<<< HEAD
 					"_id": "574b45d2018538a40fa78caa"
+=======
+					"_id": "574b3e14122956b0377ebb6a"
+>>>>>>> 12ab47b8f540fe4e31663bb29454cc74e2a080ce
 				},
 				"path": "always",
 				"instance": "Array",
