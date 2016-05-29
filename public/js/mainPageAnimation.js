@@ -38,15 +38,7 @@ $(".input-group").keypress(function(e) {
     if(e.which === 13) {
         formData = $(".input-group").find('input[name="name"]').val();
         console.log(formData);
-        
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+ formData+"&requirePictures=true", false);
-        xhr.send();
-        var responseString = JSON.parse(xhr.responseText);
-
-        
-        getMatches(responseString.matches);
-        //getRecipe("Vegetarian-Cabbage-Soup-Recipezaar");
+        window.location.href = './searchResults.html' + '#' + formData;
     }
     
 });
@@ -67,7 +59,7 @@ function getMatches(arr) {
         out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
         
     }
-    $.redirect("./searchResults.php",{ result:out},"POST");    
+    //$.redirect("./searchResults.html",{ result:out},"POST");    
 }
 
 

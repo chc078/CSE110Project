@@ -48,14 +48,27 @@ module.exports = function(passport){
 		failureFlash : true  
 	}));
 
-	/* GET login page. */
+	/* GET results page. */
 	router.get('/results', function(req, res) {
 		// Display the Login page with any flash message, if any
 		res.render('searchResults', { message: req.flash('message') });
 	});
 
-	/* Handle Login POST */
+	/* Handle results POST */
 	router.post('/results', passport.authenticate('login', {
+		successRedirect: '/home',
+		failureRedirect: '/',
+		failureFlash : true
+	}));
+
+	/* GET recipe page. */
+	router.get('/individualRecipe', function(req, res) {
+		// Display the Login page with any flash message, if any
+		res.render('individualRecipes', { message: req.flash('message') });
+	});
+
+	/* Handle recipe POST */
+	router.post('/individualRecipe', passport.authenticate('login', {
 		successRedirect: '/home',
 		failureRedirect: '/',
 		failureFlash : true
@@ -72,6 +85,7 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
+<<<<<<< HEAD
 	router.get('/storage', function(req, res){
 		if (!req.session.user) {
 			res.status(401).send();
@@ -127,6 +141,10 @@ module.exports = function(passport){
 
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
+//=======
+	router.get('/individual', function(req, res){
+		res.render('individualRecipes', {message: req.flash('message')});
+	    origin/copy_master
 	});
 
 	return router;

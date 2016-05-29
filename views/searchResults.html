@@ -2,12 +2,11 @@
 <head>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/styleSearchResults.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/styleSearchResults.css">
     <!--link(rel='stylesheet', type='text/css', href='stylesheets/temp.css')-->
     <meta charset="UTF-8">
     <title>Recipe Results</title>
 </head>
-<body>
 <div id="headers" class="headers">
     <form class="search-container" onsubmit="return false;">
         <h1>FOODOPIA</h1>
@@ -82,44 +81,12 @@
             </div>
         </div>
     </div>
-    <button ng-click="filterSearch" id="get_result" class="search">Filter Results</button>
-        <button ng-click="clearFilters" id= "Reset" class="clear">Clear Filters
+    <button ng-click="filterSearch" id="get_result" class="search">Filter Results
+    <button ng-click="clearFilters" id= "Reset" class="clear">Clear Filters
 
-        </button>
+    </button>
 </filters>
 
-<div class="wrap">
-    <div class="box">
-        <div class="boxInner">
-            <img src="https://bunge.s3.amazonaws.com/categories/images/000/000/006/content/Super-Cat-Food-Ingredients.jpg?1357968333" />
-            <div class="titleBox">Shrimp</div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="boxInner">
-            <img src="http://www.tinyurbankitchen.com/wp-content/uploads/2009/12/4201400700_f7fcbcf642_o.jpg" />
-            <div class="titleBox">Hot Pot</div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="boxInner">
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2015-08/3/16/enhanced/webdr08/enhanced-16478-1438634921-7.jpg" />
-            <div class="titleBox">Swedish cookies</div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="boxInner">
-            <img src="http://static2.businessinsider.com/image/51f03f966bb3f73c7700000b/19-fast-food-hacks-that-will-change-the-way-you-order.jpg" />
-            <div class="titleBox">Burger</div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="boxInner">
-            <img src="http://cdn.pinchofyum.com/wp-content/uploads/Ramen-3.jpg" />
-            <div class="titleBox">Ramen :D</div>
-        </div>
-    </div>
-</div>
 <div class="response">
 </div>
 </body>
@@ -127,6 +94,6 @@
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 
-<script src="js/resultAnimation.js" type="text/javascript"></script>
+<script type="text/javascript" src="../public/js/resultsAmination.js"></script>
 
 </html>

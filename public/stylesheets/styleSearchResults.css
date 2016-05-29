@@ -537,6 +537,13 @@ body.touch .boxInner.touchFocus .titleBox {
 }
 
 .response{
-    color: red;
-    padding-left: 30px;     /*temporary value, I will leave this to front end to decide*/
+    overflow: hidden;
+    width: 90%;
+    margin: 30px auto;
+    padding: 0 20px 20px 20px;
+    background-color: rgba(32, 38, 52, 0.4);
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
 }
