@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styleIndividualRecipe.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>Foodopia Recipe Page</title>
+</head>
+
+<body>
+
+    <div>
+        <div class="box" id="home">
+            <a href="/home"><i class="fa fa-home fa-2x" aria-hidden="true" id="home-button"></i></a>
+        </div>
+
+        <div class="box"  id="back">
+            <a href="/home"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" id="back-button"></i></a>
+        </div>
+
+        <div class="save-button" id="recipeSaveButton">
+            <a href="/storage">
+                <h3 id="save"> Save Recipe</h3>
+                <i class="fa fa-floppy-o" aria-hidden="true" id="recipeSave"></i>
+            </a>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="mainBox">
+        <h1 id="recipeName"></h1>
+        <div class="ingredientList">
+            <h3>Ingredients</h3>
+            <p id="ingredientList"></p>
+        </div>
+
+        <div class="foodImage">
+            <img class="resize" id="foodImage" src="">
+        </div>
+
+        <div class="frame">
+            <iframe src="" id="foodPage">
+            </iframe>
+        </div>
+
+    </div>
+
+    <duv class="cookingButton">
+        <h1>Start Cooking!</h1>
+    </duv>
+
+
+
+
+</body>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/individualRecipes.js"></script>
+
+
+</html>
