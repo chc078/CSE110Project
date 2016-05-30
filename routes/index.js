@@ -85,7 +85,7 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 	router.get('/storage', function(req, res){
 		if (!req.session.user) {
 			res.status(401).send();
@@ -141,10 +141,11 @@ module.exports = function(passport){
 
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
+	});
 //=======
 	router.get('/individual', function(req, res){
 		res.render('individualRecipes', {message: req.flash('message')});
-	    origin/copy_master
+	    //origin/copy_master
 	});
 
 	return router;
