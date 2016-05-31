@@ -659,7 +659,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574d214659289aad0e6ebf04"
+					"_id": "574dd84f1a2a5fe613460aa7"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -844,7 +844,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574d214659289aad0e6ebf05"
+					"_id": "574dd84f1a2a5fe613460aa8"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -1013,7 +1013,7 @@
 			"always": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574d214659289aad0e6ebf06"
+					"_id": "574dd84f1a2a5fe613460aa9"
 				},
 				"path": "always",
 				"instance": "Array",

@@ -18,7 +18,8 @@ body{
 
 /* header */
 #headers{
-    overflow: visible;
+    overflow: hidden;
+
 }
 h1{
     font-family: 'Abril Fatface';
