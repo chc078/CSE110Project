@@ -21,13 +21,28 @@ $(".search-container").keypress(function(e) {
 $("#get_result").click(function(){
 	call_api();
 });
-
+$("#t_range").click(function(){
+	var time = document.getElementById("t_range").value;
+	$(".t-value").html(time);
+});
+$("#c-range").click(function(){
+	var cal = document.getElementById("c-range").value;
+	$(".c-value").html(cal);
+});
 function call_api(){
 	var formData;
 	var Cusines="";
 	var Courses="";
 	var Calories="";
 	var Time_cost="";
+
+	
+	var time = document.getElementById("t_range").value;
+	var max_time_param="&maxTotalTimeInSeconds="+time;
+	var calorie=document.getElementById("c-range").value;
+	var max_calorie="&nutrition.ENERC_KCAL.max="+calorie;
+	console.log(max_calorie);
+	console.log(max_time_param);
 	if(document.getElementById('c1').checked) {
 		Cusines+="&allowedCuisine[]=cuisine^cuisine-chinese"
 	}
@@ -82,7 +97,7 @@ function call_api(){
 	
 	var xhr = new XMLHttpRequest();
 	var request = "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q=";
-	var criteria = formData+Cusines+Courses;
+	var criteria = formData+Cusines+Courses+max_time_param+max_calorie;
 	console.log(criteria);
 	var encoded_request = criteria;
 	console.log(request+encoded_request);
