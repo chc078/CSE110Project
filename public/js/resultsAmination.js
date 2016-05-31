@@ -118,15 +118,19 @@ function getNutrition(arr){
 	console.log(nutrition);
 }
 function getMatches(arr) {
+	console.log(arr);
 	var out = "";
 	var i;
 	for(i = 0; i < arr.length; i++) {
+		var url = arr[i].smallImageUrls[0];
+		url=url.substring(0,url.length-2);
+		url=url+"1000";
 		//<a href="http://localhost:3000/individualRecipes.html#"+arr[i].id>
 		//out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id+'src=' + arr[i].smallImageUrls[0] +'></a>'+
 		//	'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
-		out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id +' src=' + arr[i].smallImageUrls[0] +' onclick= "redirect(this)"'+'></a>'+
+		out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id +' src=' + url +' onclick= "redirect(this)"'+'>'+
 			'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
-		console.log(out);
+		//console.log(out);
 		//out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
 	}
 
