@@ -58,8 +58,23 @@ function call_api(){
 	if(document.getElementById('c5').checked) {
 		Cusines+="&allowedCuisine[]=cuisine^cuisine-indian"
 	}
+	if(document.getElementById('c7').checked) {
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-italian"
+	}
+	if(document.getElementById('c8').checked) {
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-english"
+	}
+	if(document.getElementById('c9').checked) {
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-french"
+	}
+	if(document.getElementById('c10').checked) {
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-japanese"
+	}
+	if(document.getElementById('c11').checked) {
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-greek"
+	}
 	if(document.getElementById('c6').checked){
-		Cusines+="&allowedCuisine[]=cuisine^cuisine-kid-friendly&allowedCuisine[]=cuisine^cuisine-italian&allowedCuisine[]=cuisine^cuisine-asian&allowedCuisine[]=cuisine^cuisine-southern&allowedCuisine[]=cuisine^cuisine-french&allowedCuisine[]=cuisine^cuisine-barbecue-bbq&allowedCuisine[]=cuisine^cuisine-greek&allowedCuisine[]=cuisine^cuisine-english&allowedCuisine[]=cuisine^cuisine-spanish&allowedCuisine[]=cuisine^cuisine-japanese"
+		Cusines+="&allowedCuisine[]=cuisine^cuisine-kid-friendly&allowedCuisine[]=cuisine^cuisine-asian&allowedCuisine[]=cuisine^cuisine-barbecue-bbq&allowedCuisine[]=cuisine^cuisine-southern&allowedCuisine[]=cuisine^cuisine-spanish"
 	}
 	//############################################
 	if(document.getElementById('m1').checked) {
