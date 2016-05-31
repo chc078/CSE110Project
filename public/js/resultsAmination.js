@@ -121,12 +121,20 @@ function getMatches(arr) {
 	var out = "";
 	var i;
 	for(i = 0; i < arr.length; i++) {
-		out += '<div class="box">' + '<div class="boxInner">' + '<a href="http://localhost:63342/CSE110Project/views/individualRecipes.html"><img src=' + arr[i].smallImageUrls[0] +'></a>'+
+		//<a href="http://localhost:3000/individualRecipes.html#"+arr[i].id>
+		//out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id+'src=' + arr[i].smallImageUrls[0] +'></a>'+
+		//	'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
+		out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id +' src=' + arr[i].smallImageUrls[0] +' onclick= "redirect(this)"'+'></a>'+
 			'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
+		console.log(out);
 		//out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
 	}
 
 	$(".response").empty();
 	$(".response").html(out);
 	
+}
+function redirect(img){
+	window.location.href = './individualRecipes.html' + '#' + img.id;
+	console.log(id);
 }
