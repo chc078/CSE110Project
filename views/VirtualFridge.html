@@ -50,14 +50,14 @@
             <table border="0" cellspacing="0">
                 <tr class="table-header">
                     <td class="left">Checked</td>
-                    <td class="left">Item Name</td>
-                    <td class="left">Additional Comments</td>
+                    <td class="left" >Item Name</td>
+                    <td class="left" >Additional Comments</td>
                     <td class="center">Quantity</td>
                     <td class="center">Delete</td>
                 </tr>
                 <tr ng-repeat="item in user.slist | orderBy: '-checked':true">
                     <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, slist)" type='checkbox' checklist-value="item.checked"></td>
-                    <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+                    <td ng-class="{selected: item.checked==true}" id="Item_name">{{item.name}}</td>
                     <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
                     <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
                     <td class="center"><i class="fa fa-trash" ng-click="remove(item)"></i></td>
@@ -93,6 +93,9 @@
             <button id="toShopping">Go to My Shopping List!</button>
             <h1> </h1>
             <button class="clear" ng-click="inventoryClearAll(inventory)">Clear Inventory</button>
+        </div>
+        <div id="what_can_I_cook">
+            
         </div>
     </div>
 </div>

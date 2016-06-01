@@ -13,7 +13,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
   //$scope.selection = [];
 
   $scope.user = User.$get({'username': myName});
-
+  
   $scope.remove = function(item) {
     var index = $scope.user.slist.indexOf(item);    //remove an item from shopping list
     $scope.user.slist.splice(index, 1);
@@ -21,7 +21,10 @@ shoppingList.controller("index", function ($scope, User, $http) {
   };
 
   $scope.removeInventory = function(item) {
-    var index = $scope.user.vfridge.indexOf(item);   //remove an item from vfridge
+    var index = $scope.user.vfridge.indexOf(item);
+    var item = $scope.user.vfridge;
+    console.log(item);
+       //remove an item from vfridge
     var left = $scope.user.vfridge[index].quantity - 1;
     if ( left > 0) {
       $scope.user.vfridge[index].quantity = $scope.user.vfridge[index].quantity - 1;
@@ -140,6 +143,11 @@ shoppingList.controller("index", function ($scope, User, $http) {
     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
 
   }
+  var item = User.find({username:myName},{"vfridge":1,"_id":0});
+  console.log(item);
 
+  console.log(item.vfridge);
+  //var arr_from_json = JSON.parse( item );
+  //console.log(arr_from_json);
 });
 //end of controller
