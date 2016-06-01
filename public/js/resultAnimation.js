@@ -141,6 +141,6 @@ function getMatches(arr) {
 
 }
 function redirect(img){
-    window.location.href = '/individualRecipes' + '#' + img.id;
+    window.location.href = 'individualRecipes' + '#' + img.id;
     console.log(id);
 }

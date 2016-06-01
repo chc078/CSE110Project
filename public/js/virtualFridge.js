@@ -35,7 +35,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
     for (var key in $scope.user.always) {
       var found = false;
       var inList = false;
-      var have = left;
+      var have = 0;
       var slistIndex = -1;
       //alert("have"+have);
       for (var i in $scope.user.vfridge) {
