@@ -35,7 +35,9 @@ $("#sour").click(function(){
 });
 
 $("#save").click(function(){
-    
+    var myName = document.getElementById('name').innerHTML;
+
+    $scope.user = User.$get({username: myName});
 });
 
 
