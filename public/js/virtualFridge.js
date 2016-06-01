@@ -21,7 +21,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
   };
 
   $scope.removeInventory = function(item) {
-    var index = $scope.user.vfridge.indexOf(item);   //remove an item from vfridge
+    var index = $scope.user.vfridge.indexOf(item);
     var left = $scope.user.vfridge[index].quantity - 1;
     if ( left > 0) {
       $scope.user.vfridge[index].quantity = $scope.user.vfridge[index].quantity - 1;
@@ -40,7 +40,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
       for (var i in $scope.user.vfridge) {
         if ($scope.user.vfridge[i].name == $scope.user.always[key].name){
           found = true;
-          have = have + $scope.user.vfridge[key].quantity;
+          have = have + $scope.user.vfridge[i].quantity;
         }
       }
       for (var j in $scope.user.slist) {
@@ -64,7 +64,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
         User.update({username: $scope.user.username},{"slist":$scope.user.slist});
       }
     }
-    
+
   };
 
   $scope.shoppingClearAll = function(list){
@@ -86,7 +86,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
       for (var i in $scope.user.vfridge) {
         if ($scope.user.vfridge[i].name == $scope.user.always[key].name){
           found = true;
-          have = have + $scope.user.vfridge[key].quantity;
+          have = have + $scope.user.vfridge[i].quantity;
         }
       }
       for (var j in $scope.user.slist) {

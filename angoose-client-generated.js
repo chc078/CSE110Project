@@ -683,7 +683,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e61fa00dd61a50ba45a2c"
+					"_id": "574e92e7e77b97560ebc125d"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -868,7 +868,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e61fa00dd61a50ba45a2d"
+					"_id": "574e92e7e77b97560ebc125e"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -1037,7 +1037,7 @@
 			"always": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e61fa00dd61a50ba45a2e"
+					"_id": "574e92e7e77b97560ebc125f"
 				},
 				"path": "always",
 				"instance": "Array",
@@ -1188,7 +1188,7 @@
 			"allergy": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e61fa00dd61a50ba45a2f"
+					"_id": "574e92e7e77b97560ebc1260"
 				},
 				"path": "allergy",
 				"instance": "Array",
@@ -1382,6 +1382,481 @@
 						"checked": {
 							"type": "not-supported"
 						},
+						"_id": {
+							"type": "not-supported",
+							"auto": true
+						},
+						"id": {
+							"path": "id",
+							"getters": [
+								"not-supported"
+							],
+							"setters": [],
+							"options": {}
+						}
+					},
+					"_requiredpaths": [],
+					"s": {
+						"hooks": {
+							"_pres": {},
+							"_posts": {}
+						},
+						"queryHooks": {
+							"count": true,
+							"find": true,
+							"findOne": true,
+							"findOneAndUpdate": true,
+							"findOneAndRemove": true,
+							"update": true
+						}
+					},
+					"options": {
+						"minimize": true,
+						"typeKey": "type",
+						"id": true,
+						"noVirtualId": false,
+						"_id": true,
+						"noId": false,
+						"validateBeforeSave": true,
+						"read": null,
+						"shardKey": null,
+						"autoIndex": null,
+						"discriminatorKey": "__t",
+						"versionKey": "__v",
+						"capped": false,
+						"bufferCommands": true,
+						"strict": true
+					}
+				}
+			},
+			"myCreation": {
+				"casterConstructor": "not-supported",
+				"caster": {
+					"_id": "574e92e7e77b97560ebc1263",
+					"steps": [],
+					"ingredient": []
+				},
+				"path": "myCreation",
+				"instance": "Array",
+				"setters": [],
+				"getters": [],
+				"options": {
+					"type": [
+						{
+							"name": {
+								"type": "not-supported"
+							},
+							"ingredient": [
+								{
+									"name": {
+										"type": "not-supported"
+									},
+									"quantity": {
+										"type": "not-supported"
+									}
+								}
+							],
+							"comment": {
+								"type": "not-supported"
+							},
+							"steps": [
+								{
+									"step": {
+										"type": "not-supported"
+									}
+								}
+							]
+						}
+					]
+				},
+				"_index": null,
+				"defaultValue": "not-supported",
+				"schema": {
+					"paths": {
+						"name": {
+							"enumValues": [],
+							"regExp": null,
+							"path": "name",
+							"instance": "String",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": "String"
+							},
+							"_index": null
+						},
+						"ingredient": {
+							"casterConstructor": "not-supported",
+							"caster": {
+								"_id": "574e92e7e77b97560ebc1261"
+							},
+							"path": "ingredient",
+							"instance": "Array",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": [
+									{
+										"name": {
+											"type": "not-supported"
+										},
+										"quantity": {
+											"type": "not-supported"
+										}
+									}
+								]
+							},
+							"_index": null,
+							"defaultValue": "not-supported",
+							"schema": {
+								"paths": {
+									"name": {
+										"enumValues": [],
+										"regExp": null,
+										"path": "name",
+										"instance": "String",
+										"setters": [],
+										"getters": [],
+										"options": {
+											"type": "String"
+										},
+										"_index": null
+									},
+									"quantity": {
+										"path": "quantity",
+										"instance": "Number",
+										"setters": [],
+										"getters": [],
+										"options": {
+											"type": "Number"
+										},
+										"_index": null
+									},
+									"_id": {
+										"path": "_id",
+										"instance": "ObjectID",
+										"setters": [
+											"not-supported"
+										],
+										"getters": [],
+										"options": {
+											"auto": true,
+											"type": "ObjectId"
+										},
+										"_index": null,
+										"defaultValue": "not-supported"
+									}
+								},
+								"subpaths": {},
+								"virtuals": {
+									"id": {
+										"path": "id",
+										"getters": [
+											"not-supported"
+										],
+										"setters": [],
+										"options": {}
+									}
+								},
+								"singleNestedPaths": {},
+								"nested": {},
+								"inherits": {},
+								"callQueue": [
+									[
+										"pre",
+										{
+											"0": "save",
+											"1": false,
+											"2": "not-supported"
+										}
+									],
+									[
+										"pre",
+										{
+											"0": "save",
+											"1": true,
+											"2": "not-supported"
+										}
+									]
+								],
+								"_indexes": [],
+								"methods": {},
+								"statics": {},
+								"tree": {
+									"name": {
+										"type": "not-supported"
+									},
+									"quantity": {
+										"type": "not-supported"
+									},
+									"_id": {
+										"type": "not-supported",
+										"auto": true
+									},
+									"id": {
+										"path": "id",
+										"getters": [
+											"not-supported"
+										],
+										"setters": [],
+										"options": {}
+									}
+								},
+								"_requiredpaths": [],
+								"s": {
+									"hooks": {
+										"_pres": {},
+										"_posts": {}
+									},
+									"queryHooks": {
+										"count": true,
+										"find": true,
+										"findOne": true,
+										"findOneAndUpdate": true,
+										"findOneAndRemove": true,
+										"update": true
+									}
+								},
+								"options": {
+									"minimize": true,
+									"typeKey": "type",
+									"id": true,
+									"noVirtualId": false,
+									"_id": true,
+									"noId": false,
+									"validateBeforeSave": true,
+									"read": null,
+									"shardKey": null,
+									"autoIndex": null,
+									"discriminatorKey": "__t",
+									"versionKey": "__v",
+									"capped": false,
+									"bufferCommands": true,
+									"strict": true
+								}
+							}
+						},
+						"comment": {
+							"enumValues": [],
+							"regExp": null,
+							"path": "comment",
+							"instance": "String",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": "String"
+							},
+							"_index": null
+						},
+						"steps": {
+							"casterConstructor": "not-supported",
+							"caster": {
+								"_id": "574e92e7e77b97560ebc1262"
+							},
+							"path": "steps",
+							"instance": "Array",
+							"setters": [],
+							"getters": [],
+							"options": {
+								"type": [
+									{
+										"step": {
+											"type": "not-supported"
+										}
+									}
+								]
+							},
+							"_index": null,
+							"defaultValue": "not-supported",
+							"schema": {
+								"paths": {
+									"step": {
+										"enumValues": [],
+										"regExp": null,
+										"path": "step",
+										"instance": "String",
+										"setters": [],
+										"getters": [],
+										"options": {
+											"type": "String"
+										},
+										"_index": null
+									},
+									"_id": {
+										"path": "_id",
+										"instance": "ObjectID",
+										"setters": [
+											"not-supported"
+										],
+										"getters": [],
+										"options": {
+											"auto": true,
+											"type": "ObjectId"
+										},
+										"_index": null,
+										"defaultValue": "not-supported"
+									}
+								},
+								"subpaths": {},
+								"virtuals": {
+									"id": {
+										"path": "id",
+										"getters": [
+											"not-supported"
+										],
+										"setters": [],
+										"options": {}
+									}
+								},
+								"singleNestedPaths": {},
+								"nested": {},
+								"inherits": {},
+								"callQueue": [
+									[
+										"pre",
+										{
+											"0": "save",
+											"1": false,
+											"2": "not-supported"
+										}
+									],
+									[
+										"pre",
+										{
+											"0": "save",
+											"1": true,
+											"2": "not-supported"
+										}
+									]
+								],
+								"_indexes": [],
+								"methods": {},
+								"statics": {},
+								"tree": {
+									"step": {
+										"type": "not-supported"
+									},
+									"_id": {
+										"type": "not-supported",
+										"auto": true
+									},
+									"id": {
+										"path": "id",
+										"getters": [
+											"not-supported"
+										],
+										"setters": [],
+										"options": {}
+									}
+								},
+								"_requiredpaths": [],
+								"s": {
+									"hooks": {
+										"_pres": {},
+										"_posts": {}
+									},
+									"queryHooks": {
+										"count": true,
+										"find": true,
+										"findOne": true,
+										"findOneAndUpdate": true,
+										"findOneAndRemove": true,
+										"update": true
+									}
+								},
+								"options": {
+									"minimize": true,
+									"typeKey": "type",
+									"id": true,
+									"noVirtualId": false,
+									"_id": true,
+									"noId": false,
+									"validateBeforeSave": true,
+									"read": null,
+									"shardKey": null,
+									"autoIndex": null,
+									"discriminatorKey": "__t",
+									"versionKey": "__v",
+									"capped": false,
+									"bufferCommands": true,
+									"strict": true
+								}
+							}
+						},
+						"_id": {
+							"path": "_id",
+							"instance": "ObjectID",
+							"setters": [
+								"not-supported"
+							],
+							"getters": [],
+							"options": {
+								"auto": true,
+								"type": "ObjectId"
+							},
+							"_index": null,
+							"defaultValue": "not-supported"
+						}
+					},
+					"subpaths": {},
+					"virtuals": {
+						"id": {
+							"path": "id",
+							"getters": [
+								"not-supported"
+							],
+							"setters": [],
+							"options": {}
+						}
+					},
+					"singleNestedPaths": {},
+					"nested": {},
+					"inherits": {},
+					"callQueue": [
+						[
+							"pre",
+							{
+								"0": "save",
+								"1": false,
+								"2": "not-supported"
+							}
+						],
+						[
+							"pre",
+							{
+								"0": "save",
+								"1": true,
+								"2": "not-supported"
+							}
+						]
+					],
+					"_indexes": [],
+					"methods": {},
+					"statics": {},
+					"tree": {
+						"name": {
+							"type": "not-supported"
+						},
+						"ingredient": [
+							{
+								"quantity": {
+									"type": "not-supported"
+								},
+								"name": {
+									"type": "not-supported"
+								}
+							}
+						],
+						"comment": {
+							"type": "not-supported"
+						},
+						"steps": [
+							{
+								"step": {
+									"type": "not-supported"
+								}
+							}
+						],
 						"_id": {
 							"type": "not-supported",
 							"auto": true

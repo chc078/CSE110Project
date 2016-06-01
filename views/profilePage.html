@@ -165,7 +165,7 @@
 
         <div id="errorMessage"><i class="icon-cross"></i>Please enter all inputs!</div>
 
-        <div id="successMessage"><i class="icon-checkmark"></i>Item added to shopping list!</div>
+        <div id="successMessage"><i class="icon-checkmark"></i>Item added to your list of always-in-my-fridge!</div>
 
         <div class= "half margin-right">
             <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
@@ -186,10 +186,10 @@
                     <td class="center"><i class="fa fa-trash" ng-click="remove(item)"></i></td>
                 </tr>
             </table>
-            <div ng-hide="user.always.length" class="center">You don't have things always in your fridge now!</div>
+            <div ng-hide="user.always.length" class="center">You don't have things always in your list now!</div>
             <h1 ng-hide="user.always.length" class="center"> </h1>
             <h1> </h1>
-            <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button>
+            <button class="clear" ng-click="clearAll(list)">Clear Always-in-my-fridge List</button>
         </div>
     </div>
 </div>
