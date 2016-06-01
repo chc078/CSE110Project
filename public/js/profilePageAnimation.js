@@ -5,6 +5,40 @@ $('#basic').hide();
 $('#alwaysInFridge').hide();
 $('#back-button').hide();
 
+$("#bitter").click(function(){
+    var bitter = document.getElementById("bitter").value;
+    //$(".c-value").html(cal);
+});
+
+$("#sweet").click(function(){
+    var sweet = document.getElementById("sweet").value;
+    //$(".c-value").html(cal);
+});
+
+$("#salty").click(function(){
+    var salty = document.getElementById("salty").value;
+   // $(".c-value").html(cal);
+});
+
+$("#meaty").click(function(){
+    var meaty = document.getElementById("meaty").value;
+   // $(".c-value").html(cal);
+});
+
+$("#piqant").click(function(){
+    var piqant = document.getElementById("piqant").value;
+   // $(".c-value").html(cal);
+});
+
+$("#sour").click(function(){
+    var sour = document.getElementById("sour").value;
+});
+
+$("#save").click(function(){
+    
+});
+
+
 
 
 $('#UserInfo').click(function(){
