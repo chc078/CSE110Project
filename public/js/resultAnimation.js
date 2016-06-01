@@ -26,6 +26,7 @@ $("#get_result").click(function(){
 $("#t_range").click(function(){
     var time = document.getElementById("t_range").value;
     $(".t-value").html(time);
+    time = time * 60;
 });
 $("#c-range").click(function(){
     var cal = document.getElementById("c-range").value;

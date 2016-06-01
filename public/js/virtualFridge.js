@@ -37,12 +37,10 @@ shoppingList.controller("index", function ($scope, User, $http) {
       var inList = false;
       var have = 0;
       var slistIndex = -1;
-      //alert("have"+have);
       for (var i in $scope.user.vfridge) {
         if ($scope.user.vfridge[i].name == $scope.user.always[key].name){
           found = true;
           have = have + $scope.user.vfridge[key].quantity;
-          alert("vfridge"+have);
         }
       }
       for (var j in $scope.user.slist) {
@@ -50,8 +48,6 @@ shoppingList.controller("index", function ($scope, User, $http) {
           found = true;
           inList = true;
           slistIndex = j;
-          have = have + $scope.user.slist[key].quantity;
-          alert("slist"+have);
         }
       }
       if (found == false) {
@@ -64,10 +60,11 @@ shoppingList.controller("index", function ($scope, User, $http) {
           User.update({username: $scope.user.username}, {"slist": $scope.user.slist});
         }
         //alert($scope.user.always[key].quantity-have);
-        $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity-have, "checked": false});
+        $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity - have, "checked": false});
         User.update({username: $scope.user.username},{"slist":$scope.user.slist});
       }
     }
+    
   };
 
   $scope.shoppingClearAll = function(list){
@@ -83,6 +80,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
 
     for (var key in $scope.user.always) {
       var found = false;
+      var inList = false;
       var have = 0;
       var slistIndex = -1;
       for (var i in $scope.user.vfridge) {
@@ -92,20 +90,23 @@ shoppingList.controller("index", function ($scope, User, $http) {
         }
       }
       for (var j in $scope.user.slist) {
-        if ($scope.user.slist[j].name == $scope.user.always[key].name){
+        if ($scope.user.slist[j].name == $scope.user.always[key].name && $scope.user.slist[j].checked == false){
           found = true;
+          inList = true;
           slistIndex = j;
-          have = have + $scope.user.slist[key].quantity;
         }
       }
       if (found == false) {
         $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity, "checked": false});
         User.update({username: $scope.user.username},{"slist":$scope.user.slist});
       }
-      if ( have < $scope.user.always[key].quantity) {
-        $scope.user.slist.splice(slistIndex, 1);
-        User.update({username: $scope.user.username},{"slist":$scope.user.slist});
-        $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity-have, "checked": false});
+      else if ( have < $scope.user.always[key].quantity) {
+        if (inList) {
+          $scope.user.slist.splice(slistIndex, 1);
+          User.update({username: $scope.user.username}, {"slist": $scope.user.slist});
+        }
+        //alert($scope.user.always[key].quantity-have);
+        $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity - have, "checked": false});
         User.update({username: $scope.user.username},{"slist":$scope.user.slist});
       }
     }

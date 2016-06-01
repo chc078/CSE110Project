@@ -10,7 +10,7 @@
 
 <div id="headers" class="headers">
     <form class="search-container" onsubmit="return false;">
-        <h1>FOODOPIA</h1>
+        <a href="/"><h1>FOODOPIA</h1></a>>
         <input type="text" name='name' placeholder="Search for..." class="search-bar">
         <!--a(href='#')
         img.search-icon(src='http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png')
@@ -19,11 +19,11 @@
 </div>
 <filters id="Filters" class="controls">
     <div id="firstrow" class="row">
-        <div class="col col-span-2">
+        <div class="col col-span-1">
             <div class="icon icon--cuisine"></div>
-            <input type="text" placeholder="Cuisines" data-placeholder="What am I feeling like?" data-placeholder-expanded="What am I feeling like?" class="cuisine">
+            <p class="cuisine">Cuisines</p>
         </div>
-        <div class="col col-span-10">
+        <div class="col col-span-11">
             <input id="c1" type="checkbox" name="cb">
             <label for="c1">Chinese</label>
             <input id="c2" type="checkbox" name="cb">
@@ -34,16 +34,26 @@
             <label for="c4">American</label>
             <input id="c5" type="checkbox" name="cb">
             <label for="c5">Indian</label>
+            <input id="c7" type="checkbox" name="cb">
+            <label for="c7">Italian</label>
+            <input id="c8" type="checkbox" name="cb">
+            <label for="c8">English</label>
+            <input id="c9" type="checkbox" name="cb">
+            <label for="c9">French</label>
+            <input id="c10" type="checkbox" name="cb">
+            <label for="c10">Japanese</label>
+            <input id="c11" type="checkbox" name="cb">
+            <label for="c11">Greek</label>
             <input id="c6" type="checkbox" name="cb">
             <label for="c6">Others</label>
         </div>
     </div>
     <div class="row">
-        <div class="col col-span-2">
+        <div class="col col-span-1">
             <div class="icon icon--meal"></div>
-            <input type="text" placeholder="Meal" data-placeholder="What am I feeling like?" data-placeholder-expanded="What am I feeling like?" class="meal">
+            <p class="meal">Meal</p>
         </div>
-        <div class="col col-span-10">
+        <div class="col col-span-11">
             <input id="m1" type="checkbox" name="cb">
             <label for="m1">Appetizers</label>
             <input id="m2" type="checkbox" name="cb">
@@ -63,20 +73,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col col-span-2">
+        <div class="col col-span-1">
             <div class="icon icon--calorie"></div>
-            <input type="text" placeholder="Calories" class="calories">
+            <p class="calories">Calories</p>
         </div>
-        <div class="col col-span-4 slider">
+        <div class="col col-span-5 slider">
             <div class="c-slider">
                 <input type="range" value="500" min="0" max="2000" step="10" class="c-range" id="c-range"><span class="c-value">500</span>
             </div>
         </div>
-        <div class="col col-span-2">
+        <div class="col col-span-1">
             <div class="icon icon--time"></div>
-            <input type="text" placeholder="Time Cost" class="time">
+            <p class="time">Time Cost</p>
         </div>
-        <div class="col col-span-4 slider">
+        <div class="col col-span-5 slider">
             <div class="t-slider">
                 <input type="range" value="60" min="0" max="180" step="5" class="t-range" id="t_range"><span class="t-value">60</span>
             </div>

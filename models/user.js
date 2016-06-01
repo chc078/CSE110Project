@@ -6,6 +6,8 @@ var userSchema = new mongoose.Schema({
    email: {type: String, unique: true},
    resetPasswordToken: {type:String},
    resetPasswordExpire: {type : Date},
+   id: String,
+   access_token: String,
    slist: [{
       name: {type: String},
       shop: {type: String},

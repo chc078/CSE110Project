@@ -33,7 +33,7 @@ module.exports = function(passport){
 	router.post('/login', passport.authenticate('login', {
 		successRedirect: '/home',
 		failureRedirect: '/',
-		failureFlash : true  
+		failureFlash : true
 	}));
 
 	/* GET Registration Page */
@@ -45,7 +45,7 @@ module.exports = function(passport){
 	router.post('/signup', passport.authenticate('signup', {
 		successRedirect: '/home',
 		failureRedirect: '/',
-		failureFlash : true  
+		failureFlash : true
 	}));
 
 	/* GET Home Page */
@@ -81,7 +81,7 @@ module.exports = function(passport){
 	router.get('/searchResults', function(req, res){
 		res.render('searchResults',{message: req.flash('message')});
 	});
-	
+
 	router.get('/profile', function(req, res){
 		if (!req.session.user) {
 			res.status(401).send();
@@ -121,6 +121,15 @@ module.exports = function(passport){
 	router.post('/reset/:token', function(req, res) {
 		Forget.resetPost(req, res);
 	});
+
+	router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+	// handle the callback after facebook has authenticated the user
+	router.get('/auth/facebook/callback',
+		passport.authenticate('facebook', {
+			successRedirect : '/home',
+			failureRedirect : '/'
+		}));
 
 	return router;
 };

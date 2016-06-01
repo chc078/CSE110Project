@@ -656,10 +656,34 @@
 				},
 				"_index": null
 			},
+			"id": {
+				"enumValues": [],
+				"regExp": null,
+				"path": "id",
+				"instance": "String",
+				"setters": [],
+				"getters": [],
+				"options": {
+					"type": "String"
+				},
+				"_index": null
+			},
+			"access_token": {
+				"enumValues": [],
+				"regExp": null,
+				"path": "access_token",
+				"instance": "String",
+				"setters": [],
+				"getters": [],
+				"options": {
+					"type": "String"
+				},
+				"_index": null
+			},
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e3a0bde13d8560a0db03e"
+					"_id": "574e61fa00dd61a50ba45a2c"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -844,7 +868,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e3a0bde13d8560a0db03f"
+					"_id": "574e61fa00dd61a50ba45a2d"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -1013,7 +1037,7 @@
 			"always": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e3a0bde13d8560a0db040"
+					"_id": "574e61fa00dd61a50ba45a2e"
 				},
 				"path": "always",
 				"instance": "Array",
@@ -1164,7 +1188,7 @@
 			"allergy": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "574e3a0bde13d8560a0db041"
+					"_id": "574e61fa00dd61a50ba45a2f"
 				},
 				"path": "allergy",
 				"instance": "Array",

@@ -12,7 +12,7 @@ $(document).ready(function () {
         //getNutrition(response.matches);
         var pageURL = getUrl(responseString);
         var ingredient_arr = getIngredients(responseString);
-        var image = getImage(responseString);
+        var image = getImage(responseString.images);
         var name = recipe_id;
     }
     else{
@@ -41,11 +41,13 @@ $(document).ready(function () {
 });
 
 function getUrl(arr){
-    return arr.attribution.url;
+    return arr.source.sourceRecipeUrl;
 }
 function getIngredients(arr){
     return arr.ingredientLines;
 }
 function getImage(arr){
-    return arr.images.hostedLargeUrl;
+    //console.log("here" + arr.images.hostedLargeUrl);
+    var img = arr[0].hostedLargeUrl;
+    return img;
 }
