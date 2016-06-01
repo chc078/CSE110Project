@@ -11,7 +11,6 @@ img{
     margin: auto;
     width: 100%;
     height: auto;
-    opacity: 0.7;
 }
 
 #header {
@@ -102,8 +101,8 @@ iframe {
 }
 
 img.resize {
-    width: 360px;
-    height: 240px;
+    width: 100%;
+    height: auto;
 }
 
 .ingredientList {
@@ -127,7 +126,7 @@ img.resize {
     float: right;
     box-shadow: 3px 3px 10px #333;
     background: rgba(3,3,3,.5);
-
+    width: 30%;
     margin-left: 1vw;
     margin-right: 1vw;
     overflow: auto;
@@ -139,7 +138,7 @@ img.resize {
 
 .cookingButton {
     font-family: 'Abril Fatface';
-    margin-top: 9vw;
+    margin-top: 1vw;
     text-align: center;
     color: #ddd;
     text-shadow: 3px 3px 10px #000;

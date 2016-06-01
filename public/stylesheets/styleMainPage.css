@@ -163,8 +163,9 @@ input:focus{
 #a{
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
-    padding: 0.67vw 1.25vw;
+    padding: 0.67vw 2vw;
     background: rgba(107,255,3,0.3);
+    width: 90%;
 }
 
 #a:hover{

@@ -7,12 +7,12 @@ $(document).ready(function () {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://api.yummly.com/v1/api/recipe/"+recipe_id +"?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc", false);
         xhr.send();
-        var responseString = JSON.parse(xhr.responseText);        
+        var responseString = JSON.parse(xhr.responseText);
         //getMatches(responseString.matches);
         //getNutrition(response.matches);
         var pageURL = getUrl(responseString);
         var ingredient_arr = getIngredients(responseString);
-        var image = getImage(responseString);
+        var image = getImage(responseString.images);
         var name = recipe_id;
     }
     else{
@@ -32,20 +32,22 @@ $(document).ready(function () {
     for(var i=0;i<ingredient_arr.length;i++){
         $('#ingredientList').append('<p>' + ingredient_arr[i] + '</p><br>');
     }
-    
+
     $('#recipeName').html(name);
 
     $('.cookingButton').click(function () {
-        
+
     });
 });
 
 function getUrl(arr){
-    return arr.attribution.url;
+    return arr.source.sourceRecipeUrl;
 }
 function getIngredients(arr){
     return arr.ingredientLines;
 }
 function getImage(arr){
-    return arr.images.hostedLargeUrl;
+    //console.log("here" + arr.images.hostedLargeUrl);
+    var img = arr[0].hostedLargeUrl;
+    return img;
 }

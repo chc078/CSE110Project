@@ -4,7 +4,7 @@ $('#sensitive').hide();
 $('#basic').hide();
 $('#alwaysInFridge').hide();
 $('#back-button').hide();
-$('#name').hide();
+
 
 
 $('#UserInfo').click(function(){
@@ -42,5 +42,6 @@ $('#alwaysInMyFridge').click(function(){
      $('#alwaysInFridge').fadeOut(100);
      $('#function-container').delay(100).fadeIn(100);
      $('#home').delay(100).fadeIn(100);
+     $('#back-button').delay(100).fadeOut(100);
 
  });

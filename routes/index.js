@@ -33,7 +33,7 @@ module.exports = function(passport){
 	router.post('/login', passport.authenticate('login', {
 		successRedirect: '/home',
 		failureRedirect: '/',
-		failureFlash : true  
+		failureFlash : true
 	}));
 
 	/* GET Registration Page */
@@ -45,7 +45,7 @@ module.exports = function(passport){
 	router.post('/signup', passport.authenticate('signup', {
 		successRedirect: '/home',
 		failureRedirect: '/',
-		failureFlash : true  
+		failureFlash : true
 	}));
 
 	/* GET results page. */
@@ -111,7 +111,7 @@ module.exports = function(passport){
 	router.get('/searchResults', function(req, res){
 		res.render('searchResults',{message: req.flash('message')});
 	});
-	
+
 	router.get('/profile', function(req, res){
 		if (!req.session.user) {
 			res.status(401).send();
@@ -120,6 +120,12 @@ module.exports = function(passport){
 		}
 		res.render('profilePage',{user: req.user});
 		res.render('profilePage', {message: req.flash('message')});
+	});
+
+	/* GET recipe page. */
+	router.get('/individualRecipes', function(req, res) {
+		// Display the Login page with any flash message, if any
+		res.render('individualRecipes', { message: req.flash('message') });
 	});
 
 
@@ -150,6 +156,15 @@ module.exports = function(passport){
 		res.render('individualRecipes', {message: req.flash('message')});
 	    //origin/copy_master
 	});
+
+	router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+	// handle the callback after facebook has authenticated the user
+	router.get('/auth/facebook/callback',
+		passport.authenticate('facebook', {
+			successRedirect : '/home',
+			failureRedirect : '/'
+		}));
 
 	return router;
 };

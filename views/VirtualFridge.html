@@ -39,7 +39,7 @@
 
         <div class= "half margin-right">
             <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
-        </div><div class="half"><input type='text'   class="searchButton" placeholder='Expiration Date (mm/dd/yyyy)' ng-model="itemShop" required></div>
+        </div><div class="half"><input type='text'   class="searchButton" placeholder='Comments (Optional)' ng-model="itemShop" required></div>
         <div class="half margin-right">
             <input type='number' class="searchButton" placeholder='Quantity' ng-model="itemQuantity" required>
         </div>
@@ -51,7 +51,7 @@
                 <tr class="table-header">
                     <td class="left">Checked</td>
                     <td class="left">Item Name</td>
-                    <td class="left">Expiration Date</td>
+                    <td class="left">Additional Comments</td>
                     <td class="center">Quantity</td>
                     <td class="center">Delete</td>
                 </tr>
@@ -77,15 +77,15 @@
             <table border="0" cellspacing="0">
                 <tr class="table-header">
                     <td>Item Name</td>
-                    <td class="left">Expiration Date</td>
+                    <td class="left">Additional Comments</td>
                     <td class="center">Quantity</td>
-                    <td class="center">Delete</td>
+                    <td class="center">Consume</td>
                 </tr>
                 <tr ng-repeat="item in user.vfridge">
                     <td class="left">{{item.name}}</td>
                     <td class="left">{{item.shop}}</td>
                     <td class="center">{{item.quantity}}</td>
-                    <td class="center"><i class="fa fa-trash" ng-click="removeInventory(item)"></i></td>
+                    <td class="center"><i class="fa fa-minus-square" ng-click="removeInventory(item)"></i></td>
                 </tr>
             </table>
             <div ng-hide="user.vfridge.length" class="center">Your inventory is empty.</div>

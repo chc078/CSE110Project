@@ -39,13 +39,22 @@ h2{
     font-weight: bold;
 }
 
+h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: relative;
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    text-shadow: 3px 3px 10px #000;
+}
 
 .center {
     text-align: center !important;
 }
 
 #orange{
-    color: orange;
+    color: rgb(66,24,5);
 }
 
 
@@ -368,3 +377,7 @@ h3{
     color: red;
 }
 
+#name{
+    font-size: 4vw;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
