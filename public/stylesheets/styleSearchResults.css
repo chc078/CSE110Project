@@ -18,7 +18,8 @@ body{
 
 /* header */
 #headers{
-    overflow: visible;
+    overflow: hidden;
+
 }
 h1{
     font-family: 'Abril Fatface';
@@ -478,6 +479,19 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
     border: 0;
 
+}
+
+
+.wrap {
+    overflow: hidden;
+    width: 90%;
+    margin: 30px auto;
+    padding: 0 20px 20px 20px;
+    background-color: rgba(32, 38, 52, 0.4);
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
 }
 
 .box {

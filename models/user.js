@@ -20,7 +20,19 @@ var userSchema = new mongoose.Schema({
    always:[{
       name: {type: String},
       quantity: {type: Number}
-   }]
+   }],
+   allergy:[
+      {name: {type: String}, default:"Dairy",  checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Egg",    checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Gluten", checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Peanut", checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Seafood",checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Sesame", checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Soy",    checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Sulfite",checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"TreeNut",checked:{type: Boolean},default:false},
+      {name: {type: String}, default:"Wheat",  checked:{type: Boolean},default:false}
+   ]
 });
 
 module.exports = mongoose.model('User', userSchema);

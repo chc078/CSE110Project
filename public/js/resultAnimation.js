@@ -20,17 +20,31 @@ $(".search-container").keypress(function(e) {
         call_api();
     }
 });
-
 $("#get_result").click(function(){
     call_api();
 });
-
+$("#t_range").click(function(){
+    var time = document.getElementById("t_range").value;
+    $(".t-value").html(time);
+});
+$("#c-range").click(function(){
+    var cal = document.getElementById("c-range").value;
+    $(".c-value").html(cal);
+});
 function call_api(){
     var formData;
     var Cusines="";
     var Courses="";
     var Calories="";
     var Time_cost="";
+
+
+    var time = document.getElementById("t_range").value;
+    var max_time_param="&maxTotalTimeInSeconds="+time;
+    var calorie=document.getElementById("c-range").value;
+    var max_calorie="&nutrition.ENERC_KCAL.max="+calorie;
+    console.log(max_calorie);
+    console.log(max_time_param);
     if(document.getElementById('c1').checked) {
         Cusines+="&allowedCuisine[]=cuisine^cuisine-chinese"
     }
@@ -85,7 +99,7 @@ function call_api(){
 
     var xhr = new XMLHttpRequest();
     var request = "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q=";
-    var criteria = formData+Cusines+Courses;
+    var criteria = formData+Cusines+Courses+max_time_param+max_calorie;
     console.log(criteria);
     var encoded_request = criteria;
     console.log(request+encoded_request);
@@ -105,17 +119,28 @@ function getNutrition(arr){
     }
     console.log(nutrition);
 }
-
 function getMatches(arr) {
+    console.log(arr);
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += '<div class="box">' + '<div class="boxInner">' + '<a href="/individualRecipe"><img src=' + arr[i].smallImageUrls[0] +'></a>'+
+        var url = arr[i].smallImageUrls[0];
+        url=url.substring(0,url.length-2);
+        url=url+"1000";
+        //<a href="http://localhost:3000/individualRecipes.html#"+arr[i].id>
+        //out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id+'src=' + arr[i].smallImageUrls[0] +'></a>'+
+        //	'<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
+        out += '<div class="box">' + '<div class="boxInner">' + '<img id='+arr[i].id +' src=' + url +' onclick= "redirect(this)"'+'>'+
             '<div class="titleBox">' +arr[i].recipeName+ '</div>' +'</div>'+'</div>'
+        //console.log(out);
         //out += '<li>' + '<img src='+arr[i].smallImageUrls[0]+'>'+arr[i].recipeName+'<p hidden>' + arr[i].id+'</p></li><br>';
     }
 
     $(".response").empty();
     $(".response").html(out);
 
+}
+function redirect(img){
+    window.location.href = '/individualRecipes' + '#' + img.id;
+    console.log(id);
 }

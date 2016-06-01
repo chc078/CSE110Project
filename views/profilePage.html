@@ -105,61 +105,59 @@
 
 
 
-<div id="sensitive">
-        <div id="option">
-            <input id="dairy" type="checkbox">
-            <h3 for="dairy">Dairy</h3>
-         </div>
+<div id="sensitive" ng-controller="allergy">
+    <h3>Foodopia knows that you are allergy to: </h3>
+    <div id="option">
+        <input type="checkbox" id="Dairy" ng-model="answersDairy[Dairy]" ng-change="stateChangedDairy(Dairy)">
+        <h3 for="dairy">Dairy</h3>
+    </div>
+    <div id="option">
+        <input type="checkbox" id="Egg" ng-model="answersEgg[Egg]" ng-change="stateChangedEgg(Egg)">
+        <h3 for="egg">Egg</h3>
+    </div>
+    <div id="option">
+        <input id="gluten" type="checkbox" ng-model="answersGluten[Gluten]" ng-change="stateChangedGluten(Gluten)">
+        <h3 for="gluten">Gluten</h3>
+    </div>
 
-        <div id="option">
-            <input id="egg" type="checkbox">
-            <h3 for="egg">Egg</h3>
-        </div>
+    <div id="option">
+        <input id="peanut" type="checkbox" ng-model="answersPeanut[Peanut]" ng-change="stateChangedPeanut(Peanut)">
+        <h3 for="peanut">Peanut</h3>
+    </div>
 
-        <div id="option">
-            <input id="gluten" type="checkbox">
-            <h3 for="gluten">Gluten</h3>
-        </div>
+    <div id="option">
+        <input id="seafood" type="checkbox" ng-model="answersSeafood[Seafood]" ng-change="stateChangedSeafood(Seafood)">
+        <h3 for="seafood">Seafood</h3>
+    </div>
+    <br><br><br><br>
 
-        <div id="option">
-            <input id="peanut" type="checkbox">
-            <h3 for="peanut">Peanut</h3>
-        </div>
+    <div id="option">
+        <input id="sesame" type="checkbox" ng-model="answersSesame[Sesame]" ng-change="stateChangedSesame(Sesame)">
+        <h3 for="sesame">Sesame</h3>
+    </div>
 
-        <div id="option">
-            <input id="seafood" type="checkbox">
-            <h3 for="seafood">Seafood</h3>
-        </div>
-        <br><br><br><br>
+    <div id="option">
+        <input id="soy" type="checkbox" ng-model="answersSoy[Soy]" ng-change="stateChangedSoy(Soy)">
+        <h3 for="soy">Soy</h3>
+    </div>
 
-        <div id="option">
+    <div id="option">
+        <input id="sulfite" type="checkbox" ng-model="answersSulfite[Sulfite]" ng-change="stateChangedSulfite(Sulfite)">
+        <h3 for="sulfite">Sulfite</h3>
+    </div>
 
-            <input id="sesame" type="checkbox">
-            <h3 for="sesame">Sesame</h3>
-        </div>
+    <div id="option">
+        <input id="treenut" type="checkbox" ng-model="answersTreeNut[TreeNut]" ng-change="stateChangedTreeNut(TreeNut)">
+        <h3 for="treenut">Tree Nut</h3>
+    </div>
 
-        <div id="option">
-            <input id="soy" type="checkbox">
-            <h3 for="soy">Soy</h3>
-        </div>
+    <div id="option">
+        <input id="wheat" type="checkbox" ng-model="answersWheat[Wheat]" ng-change="stateChangedWheat(Wheat)">
+        <h3 for="wheat">Wheat</h3>
+    </div>
+    <br><br><br>
 
-        <div id="option">
-            <input id="sulfite" type="checkbox">
-            <h3 for="sulfite">Sulfite</h3>
-        </div>
-
-        <div id="option">
-            <input id="treenut" type="checkbox">
-            <h3 for="treenut">Tree Nut</h3>
-        </div>
-
-        <div id="option">
-            <input id="wheat" type="checkbox">
-            <h3 for="wheat">wheat</h3>
-        </div>
-        <br><br><br>
-
-        <button type="button">Save</button>
+    <button type="button" ng-click="GetPush()">Save</button>
 </div>
 
 <div class="alwaysContainer" ng-controller="habit">

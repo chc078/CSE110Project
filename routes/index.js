@@ -93,7 +93,7 @@ module.exports = function(passport){
 	});
 
 	/* GET recipe page. */
-	router.get('/individualRecipe', function(req, res) {
+	router.get('/individualRecipes' + '#', function(req, res) {
 		// Display the Login page with any flash message, if any
 		res.render('individualRecipes', { message: req.flash('message') });
 	});
