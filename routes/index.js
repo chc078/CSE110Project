@@ -70,6 +70,7 @@ module.exports = function(passport){
 	});
 
 	router.get('/create', isAuthenticated, function(req, res){
+		res.render('createRecipe',{user: req.user});
 		res.render('createRecipe',{message: req.flash('message')});
 	});
 
