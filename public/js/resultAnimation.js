@@ -119,7 +119,7 @@ function call_api(){
     }
 
 	
-	var time = document.getElementById("t_range").value;
+	var time = document.getElementById("t_range").value*60;
 	var max_time_param="&maxTotalTimeInSeconds="+time;
 	var calorie=document.getElementById("c-range").value;
 	var max_calorie="&nutrition.ENERC_KCAL.max="+calorie;
