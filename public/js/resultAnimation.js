@@ -89,18 +89,19 @@ function call_api(){
         Courses+="&allowedCourse[]=course^course-Appetizers";
     }
     if(document.getElementById('m2').checked) {
-        Courses+="&allowedCourse[]=course^course-Breakfast and Brunch"
+        Courses+="&allowedCourse[]=course^course-Breakfast%20and%20Brunch";
     }
     if(document.getElementById('m3').checked) {
-        Courses+="&allowedCourse[]=course^course-Side Dishes"
+        Courses+="&allowedCourse[]=course^course-Side%20Dishes"
     }
     if(document.getElementById('m4').checked) {
-        Courses+="&allowedCourse[]=course^course-Main Dishes"
+        Courses+="&allowedCourse[]=course^course-Main%20Dishes"
     }
     if(document.getElementById('m5').checked) {
         Courses+="&allowedCourse[]=course^course-Lunch"
     }
     if(document.getElementById('m6').checked) {
+                                   //course^course-Salads
         Courses+="&allowedCourse[]=course^course-Salads"
     }
     if(document.getElementById('m7').checked) {
@@ -108,7 +109,7 @@ function call_api(){
     }
 
     if(document.getElementById('m8').checked) {
-        Courses+="&allowedCourse[]=course^course-Soups&allowedCourse[]=course^course-Beverages&allowedCourse[]=course^course-Condiments and Sauces&allowedCourse[]=course^course-Cocktails";
+        Courses+="&allowedCourse[]=course^course-Soups&allowedCourse[]=course^course-Beverages&allowedCourse[]=course^course-Condiments%20and%20Sauces&allowedCourse[]=course^course-Cocktails";
     }
 
 
