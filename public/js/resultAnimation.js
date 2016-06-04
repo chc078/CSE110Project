@@ -121,7 +121,7 @@ function call_api(){
 
     var xhr = new XMLHttpRequest();
     var request = "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q=";
-    var criteria = formData+Cusines+Courses+max_time_param+max_calorie;
+    var criteria = formData+Cusines+Courses+max_time_param+max_calorie+"&requirePictures=true";
     console.log(criteria);
     var encoded_request = criteria;
     console.log(request+encoded_request);
