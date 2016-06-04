@@ -38,7 +38,7 @@ alwaysInFridge.controller("habit", function ($scope, User, $http) {
                 for (var i in $scope.user.vfridge) {
                     if ($scope.user.vfridge[i].name == $scope.user.always[key].name){
                         found = true;
-                        have = have + $scope.user.vfridge[key].quantity;
+                        have = have + $scope.user.vfridge[i].quantity;
                     }
                 }
                 for (var j in $scope.user.slist) {

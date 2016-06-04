@@ -88,14 +88,8 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 
-//<<<<<<< HEAD
-	router.get('/storage', function(req, res){
-		if (!req.session.user) {
-			res.status(401).send();
-			console.log('error');
-			return res.redirect('/');
-		}
-		console.log('')
+	router.get('/storage', isAuthenticated, function(req, res){
+		console.log('');
 		res.render('VirtualFridge',{user: req.user});
 		res.render('VirtualFridge',{message: req.flash('message')});
 	});
@@ -104,7 +98,8 @@ module.exports = function(passport){
 		res.render('myRecipes',{message: req.flash('message')});
 	});
 
-	router.get('/create', function(req, res){
+	router.get('/create', isAuthenticated, function(req, res){
+		res.render('createRecipe',{user: req.user});
 		res.render('createRecipe',{message: req.flash('message')});
 	});
 
@@ -112,12 +107,12 @@ module.exports = function(passport){
 		res.render('searchResults',{message: req.flash('message')});
 	});
 
-	router.get('/profile', function(req, res){
-		if (!req.session.user) {
-			res.status(401).send();
-			console.log('error');
-			return res.redirect('/');
-		}
+	router.get('/customSearch', function(req, res){
+		res.render('privateCook',{user: req.user});
+		res.render('privateCook',{message: req.flash('message')});
+	});
+
+	router.get('/profile', isAuthenticated, function(req, res){
 		res.render('profilePage',{user: req.user});
 		res.render('profilePage', {message: req.flash('message')});
 	});
@@ -164,7 +159,8 @@ module.exports = function(passport){
 		passport.authenticate('facebook', {
 			successRedirect : '/home',
 			failureRedirect : '/'
-		}));
+		})
+	);
 
 	return router;
 };

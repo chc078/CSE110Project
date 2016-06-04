@@ -34,7 +34,13 @@ var userSchema = new mongoose.Schema({
       {name: {type: String}, default:"Sulfite",checked:{type: Boolean},default:false},
       {name: {type: String}, default:"TreeNut",checked:{type: Boolean},default:false},
       {name: {type: String}, default:"Wheat",  checked:{type: Boolean},default:false}
-   ]
+   ],
+   myCreation:[{
+      name: {type: String},
+      ingredient: [{name: {type: String}, quantity: {type: Number}}],
+      comment: {type: String},
+      steps: [{step: {type: String}}]
+   }]
 });
 
 module.exports = mongoose.model('User', userSchema);
