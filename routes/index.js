@@ -60,7 +60,7 @@ module.exports = function(passport){
 	});
 
 	router.get('/storage', isAuthenticated, function(req, res){
-		console.log('')
+		console.log('');
 		res.render('VirtualFridge',{user: req.user});
 		res.render('VirtualFridge',{message: req.flash('message')});
 	});
@@ -76,6 +76,11 @@ module.exports = function(passport){
 
 	router.get('/searchResults', function(req, res){
 		res.render('searchResults',{message: req.flash('message')});
+	});
+
+	router.get('/customSearch', function(req, res){
+		res.render('privateCook',{user: req.user});
+		res.render('privateCook',{message: req.flash('message')});
 	});
 
 	router.get('/profile', isAuthenticated, function(req, res){
