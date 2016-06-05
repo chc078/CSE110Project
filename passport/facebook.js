@@ -49,6 +49,9 @@ module.exports = function(passport){
                             {name: "TreeNut",checked: false},
                             {name: "Wheat",  checked: false}
                         ];
+
+               newUser.myCreation = [];
+
             // save our user to the database
             newUser.save(function(err) {
               if (err)

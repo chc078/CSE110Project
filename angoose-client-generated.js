@@ -626,13 +626,9 @@
 				"setters": [],
 				"getters": [],
 				"options": {
-					"type": "String",
-					"unique": true
+					"type": "String"
 				},
-				"_index": {
-					"unique": true,
-					"background": true
-				}
+				"_index": null
 			},
 			"resetPasswordToken": {
 				"enumValues": [],
@@ -683,7 +679,7 @@
 			"slist": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5753a991b6ddedef16aaa7cc"
+					"_id": "5753bd06357e5305185b3fb9"
 				},
 				"path": "slist",
 				"instance": "Array",
@@ -868,7 +864,7 @@
 			"vfridge": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5753a991b6ddedef16aaa7cd"
+					"_id": "5753bd06357e5305185b3fba"
 				},
 				"path": "vfridge",
 				"instance": "Array",
@@ -1037,7 +1033,7 @@
 			"always": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5753a991b6ddedef16aaa7ce"
+					"_id": "5753bd06357e5305185b3fbb"
 				},
 				"path": "always",
 				"instance": "Array",
@@ -1188,7 +1184,7 @@
 			"allergy": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5753a991b6ddedef16aaa7cf"
+					"_id": "5753bd06357e5305185b3fbc"
 				},
 				"path": "allergy",
 				"instance": "Array",
@@ -1432,7 +1428,7 @@
 			"myCreation": {
 				"casterConstructor": "not-supported",
 				"caster": {
-					"_id": "5753a991b6ddedef16aaa7d2",
+					"_id": "5753bd06357e5305185b3fbf",
 					"steps": [],
 					"ingredient": []
 				},
@@ -1488,7 +1484,7 @@
 						"ingredient": {
 							"casterConstructor": "not-supported",
 							"caster": {
-								"_id": "5753a991b6ddedef16aaa7d0"
+								"_id": "5753bd06357e5305185b3fbd"
 							},
 							"path": "ingredient",
 							"instance": "Array",
@@ -1651,7 +1647,7 @@
 						"steps": {
 							"casterConstructor": "not-supported",
 							"caster": {
-								"_id": "5753a991b6ddedef16aaa7d1"
+								"_id": "5753bd06357e5305185b3fbe"
 							},
 							"path": "steps",
 							"instance": "Array",
