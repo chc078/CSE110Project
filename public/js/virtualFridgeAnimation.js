@@ -1,7 +1,7 @@
 /**
  * Created by XavierWang on 16/5/12.
  */
- 
+/*
 $(document).ready(function() {
     setTimeout(function() {
         var search_query=$("#Item_name").html();
@@ -14,11 +14,9 @@ $(document).ready(function() {
 
     }, 1000);
     
-    /*
     
-    */
     
-});
+});*/
 function getMatches(arr) {
     console.log(arr);
     var out = "";
