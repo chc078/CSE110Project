@@ -5,7 +5,7 @@ var User = require('../models/user');
 var register = require('../passport/register');
 var bCrypt = require('bcrypt-nodejs');
 var Forget = require('../passport/forget');
-var Storage = require('../controllers/manipulateStorage');
+
 
 
 var isAuthenticated = function (req, res, next) {
