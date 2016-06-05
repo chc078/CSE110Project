@@ -1,3 +1,4 @@
 *.log
 *.xml
 .DS_Store
+angoose-client-generated.js

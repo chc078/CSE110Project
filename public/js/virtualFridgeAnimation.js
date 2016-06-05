@@ -1,6 +1,7 @@
 /**
  * Created by XavierWang on 16/5/12.
  */
+
 $('#back-button').hide();
 $('#shopping-list').hide();
 $('#inventory').hide();
