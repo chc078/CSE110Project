@@ -33,7 +33,21 @@ module.exports = function(passport){
                         newUser.email = req.param('email');
                         newUser.vfridge = [];
                         newUser.slist = [];
+                        newUser.always=[];
+                        newUser.allergy = [
+                            {name:"Dairy",   checked: false},
+                            {name: "Egg",    checked: false},
+                            {name: "Gluten", checked: false},
+                            {name: "Peanut", checked: false},
+                            {name: "Seafood",checked: false},
+                            {name: "Sesame", checked: false},
+                            {name: "Soy",    checked: false},
+                            {name: "Sulfite",checked: false},
+                            {name: "TreeNut",checked: false},
+                            {name: "Wheat",  checked: false}
+                        ];
 
+                        newUser.myCreation = [];
 
                         // save the user
                         newUser.save(function(err) {
