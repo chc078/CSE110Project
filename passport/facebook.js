@@ -5,16 +5,16 @@ module.exports = function(passport){
     passport.use ('facebook', new FacebookStrategy({
         clientID: '474313119430098',
         clientSecret: '24a6ef63a0c1f3a168689ab93ede182c',
-        callbackURL: "http://foodopia.herokuapp.com/auth/facebook/callback",
+        callbackURL: "http://localhost:3000/auth/facebook/callback",
         profileFields: ['name', 'emails','displayName']
         },
   // facebook will send back the tokens and profile
-        function(access_token, refresh_token, profile, done) {
+        function(req, access_token, refresh_token, profile, done) {
     // asynchronous
         process.nextTick(function() {
      
       // find the user in the database based on their facebook id
-        User.findOne({ 'id' : profile.id }, function(err, user) {
+        User.findOne({$or: [{'id' : profile.id }, {email: profile.emails[0].value}]}, function(err, user) {
  
         // if there is an error, stop everything and return that
         // ie an error connecting to the database
