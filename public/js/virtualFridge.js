@@ -139,7 +139,7 @@ shoppingList.controller("index", function ($scope, User, $http) {
     $scope.user.slist[item].checked = true;
     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
 
-  }
+  };
   var item = User.find({username:myName},{"vfridge":1,"_id":0});
   console.log(item);
 
