@@ -3,6 +3,15 @@
  */
 var alwaysInFridge = angular.module("profile", ['angoose.client']);
 
+alwaysInFridge.controller("basic", function ($scope, User, $http) {
+    
+    var myName = document.getElementById('name').innerHTML;
+    $scope.user = User.$get({username: myName});
+    
+    
+    
+});
+
 alwaysInFridge.controller("habit", function ($scope, User, $http) {
     $scope.itemName;
     $scope.itemQuantity;
