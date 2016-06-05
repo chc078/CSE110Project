@@ -5,7 +5,7 @@ module.exports = function(passport){
     passport.use ('facebook', new FacebookStrategy({
         clientID: '474313119430098',
         clientSecret: '24a6ef63a0c1f3a168689ab93ede182c',
-        callbackURL: "foodopia.herokuapp.com/auth/Facebook/callback",
+        callbackURL: "http://http://foodopia.herokuapp.com/auth/facebook/callback",
         profileFields: ['name', 'emails','displayName']
         },
   // facebook will send back the tokens and profile
@@ -33,7 +33,7 @@ module.exports = function(passport){
             newUser.access_token = access_token; // we will save the token that facebook provides to the user                    
             newUser.username  = profile.displayName;
             console.log(profile.displayName + " " + profile.id);
-            //newUser.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
+            newUser.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
             newUser.vfridge = [];
             newUser.slist = [];
             newUser.always=[];

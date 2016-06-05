@@ -3,13 +3,16 @@ $( document ).ready(function() {
 	var search_query = window.location.hash.substring(1);
 	$(".search-container").find('input[name="name"]').val(search_query);
 	console.log(search_query);
-	if(search_query){
-		var xhr = new XMLHttpRequest();
-    	xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+ search_query+"&requirePictures=true&maxTotalTimeInSeconds=3600&nutrition.ENERC_KCAL.max=500", false);
-    	xhr.send();
-    	var responseString = JSON.parse(xhr.responseText);        
-    	getMatches(responseString.matches);
-	}
+    if(search_query.length == 0){}
+    else {
+        if (search_query) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q=" + search_query + "&requirePictures=true&maxTotalTimeInSeconds=3600&nutrition.ENERC_KCAL.max=500", false);
+            xhr.send();
+            var responseString = JSON.parse(xhr.responseText);
+            getMatches(responseString.matches);
+        }
+    }
 	
 });
 $(".search-container").keypress(function(e) {
