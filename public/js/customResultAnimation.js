@@ -11,10 +11,13 @@ $("#needHide").hide();
 $(document).ready(function() {
     setTimeout(function() {
         var search_query = "";
+        var for_bar="";
         $('#needHide .Item_name').each(function(idx, el){
             console.log(el);
+            for_bar+=el.innerHTML+" ";
             search_query=search_query +"%20"+ el.innerHTML;
         });
+        $(".search-container").find('input[name="name"]').val(for_bar);
 
         $('#alsoHide .allergy_name').each(function(idx, el){
             console.log(el);
