@@ -13,17 +13,22 @@ $(document).ready(function() {
         var search_query = "";
         $('#needHide .Item_name').each(function(idx, el){
             console.log(el);
-            search_query=search_query +" "+ el.innerHTML;
+            search_query=search_query +"%20"+ el.innerHTML;
         });
 
         $('#alsoHide .allergy_name').each(function(idx, el){
             console.log(el);
-            search_query=search_query +" no "+ el.innerHTML;
+            search_query=search_query +"%20no%20"+ el.innerHTML;
         });
-
+        if(search_query.substring(0,3)==="%20"){
+            search_query=search_query.substring(3);
+        }
         console.log(search_query);
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+ search_query+"&requirePictures=true&maxTotalTimeInSeconds=3600&nutrition.ENERC_KCAL.max=500", false);
+        var param_request= "http://api.yummly.com/v1/api/recipes?_app_id=f690d55a&_app_key=5a8f8f5fd0032df11eefecbe8dda2dbc&q="+search_query+"&requirePictures=true&maxTotalTimeInSeconds=3600&nutrition.ENERC_KCAL.max=500";
+        console.log(param_request);       
+        xhr.open("GET",param_request , false);
+
         xhr.send();
         var responseString = JSON.parse(xhr.responseText);
         getMatches(responseString.matches);
