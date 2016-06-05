@@ -33,7 +33,7 @@ module.exports = function(passport){
             newUser.access_token = access_token; // we will save the token that facebook provides to the user                    
             newUser.username  = profile.displayName;
             console.log(profile.displayName + " " + profile.id);
-            //newUser.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
+            newUser.email = profile.emails[0].value; // facebook can return multiple emails so we'll take the first
             newUser.vfridge = [];
             newUser.slist = [];
             newUser.always=[];
