@@ -1,0 +1,73 @@
+html {
+    background: url(http://www.shumacher.com/blog/wp-content/uploads/2016/02/fyhoih.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: scroll;
+
+}
+
+/* Heading */
+
+
+h1{
+    font-family: 'Abril Fatface';
+    position: relative;
+    margin-top: 5vw;
+    text-align: center;
+    font-size: 3vw;
+    color: #ddd;
+    text-shadow: 3px 3px 10px #000;
+}
+
+h3{
+    font-family: 'Abril Fatface', sans-serif;
+    position: relative;
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 2vw;
+    color: #ddd;
+    text-shadow: 3px 3px 10px #000;
+}
+
+h4{
+    font-family: 'Abril Fatface', sans-serif;
+    position: relative;
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+    color: lightgrey;
+    text-shadow: 3px 3px 10px #000;
+    text-decoration: underline;
+}
+
+h5 {
+    font-family: 'Abril Fatface', sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 4vw;
+    color: lightgrey;
+    text-shadow: 3px 3px 10px #000;
+    text-decoration: none;
+    width: 100%;
+
+}
+
+#a{
+    text-decoration: none;
+    border: none;
+}
+
+#headers{
+    overflow: hidden;
+    text-decoration: none;
+    width: 25%;
+
+}
+
+
+
+

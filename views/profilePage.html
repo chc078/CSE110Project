@@ -33,10 +33,6 @@
         <a><i class="fa fa-map-signs fa-5x" aria-hidden="true"></i></a>
         <h2>User Info</h2>
     </div>
-    <div class="box" id="Appetite">
-        <a><i class="fa fa-coffee fa-5x" aria-hidden="true"></i></a>
-        <h2>Appetite</h2>
-    </div>
     <div class="box" id="Allergy">
         <a><i class="fa fa-ambulance fa-5x" aria-hidden="true"></i></a>
         <h2>Allergy</h2>
@@ -44,6 +40,10 @@
     <div class="box" id="alwaysInMyFridge">
         <a><i class="fa  fa-cart-arrow-down fa-5x" aria-hidden="true"></i></a>
         <h2>Always In My Fridge</h2>
+    </div>
+    <div class="box" id="thx">
+        <a><i class="fa fa-users fa-5x" aria-hidden="true"></i></a>
+        <h2>Thanks To</h2>
     </div>
 </div>
 
@@ -75,54 +75,6 @@
         </div>
     </div>
 </div>
-
-
-
-<div id="taste">
-    <h2 id="bitter" for="bitter">Bitter</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="bitter" />
-    <span id="range">6</span>
-
-    <br>
-
-    <h2 id="salty" for="salty">Salty</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="salty"/>
-    <span id="range">6</span>
-    <br>
-
-
-    <h2 id="sweet" for="sweet">Sweet</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="sweet"/>
-    <span id="range">6</span>
-    <br>
-
-    <h2 id="sour" for="sour">Sour</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="sour" />
-    <span id="range">6</span>
-    <br>
-
-
-    <h2 id="piqant" for="piquant">Piquant</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="piqant" />
-    <span id="range">6</span>
-    <br>
-
-    <h2 id="meaty" for="meaty">Meaty</h2>
-    <span id="range">0</span>
-    <input type="range" min="0" max="60" step="10" id="meaty"/>
-    <span id="range">6</span>
-    <br>
-
-    <button type="button" id="save" >Save</button>
-
-</div>
-
-
 
 <div id="sensitive" ng-controller="allergy">
     <h3>Foodopia knows that you are allergy to: </h3>
@@ -215,6 +167,19 @@
             <button class="clear" ng-click="clearAll(list)">Clear Always-in-my-fridge List</button>
         </div>
     </div>
+</div>
+
+
+
+
+<div id="thanks">
+    <h3>Foodopia and ELFs thanks following website fore their technical support:</h3>
+    <h2><a href="https://developer.yummly.com/">API pack by Yummly</a></h2>
+    <h2><a href="http://passportjs.org/">Passport Strategy by Passport</a></h2>
+    <h2><a href="https://icons8.com">Icon pack by Icons8</a></h2>
+    <h2><a href="http://fontawesome.io/">Icon pack by Font Awesome</a></h2>
+    <h2><a href="http://codepen.io/">Some Stylesheets by Codepen</a></h2>
+
 </div>
 
 </body>

@@ -58,7 +58,7 @@ alwaysInFridge.controller("habit", function ($scope, User, $http) {
                     }
                 }
                 if (found == false) {
-                    $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity, "checked": false});
+                    $scope.user.slist.push({"name": $scope.user.always[key].name, "shop":"", "quantity": $scope.user.always[key].quantity, "checked": false});
                     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
                 }
                 else if ( have < $scope.user.always[key].quantity) {
@@ -67,7 +67,7 @@ alwaysInFridge.controller("habit", function ($scope, User, $http) {
                         User.update({username: $scope.user.username}, {"slist": $scope.user.slist});
                     }
                     //alert($scope.user.always[key].quantity-have);
-                    $scope.user.slist.push({"name": $scope.user.always[key].name, "quantity": $scope.user.always[key].quantity - have, "checked": false});
+                    $scope.user.slist.push({"name": $scope.user.always[key].name, "shop":"", "quantity": $scope.user.always[key].quantity - have, "checked": false});
                     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
                 }
             }

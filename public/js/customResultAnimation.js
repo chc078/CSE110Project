@@ -17,12 +17,14 @@ $(document).ready(function() {
             for_bar+=el.innerHTML+" ";
             search_query=search_query +"%20"+ el.innerHTML;
         });
-        $(".search-container").find('input[name="name"]').val(for_bar);
 
         $('#alsoHide .allergy_name').each(function(idx, el){
             console.log(el);
             search_query=search_query +"%20no%20"+ el.innerHTML;
+            for_bar+="no " + el.innerHTML+" ";
         });
+        $(".search-container").find('input[name="name"]').val(for_bar);
+        
         if(search_query.substring(0,3)==="%20"){
             search_query=search_query.substring(3);
         }

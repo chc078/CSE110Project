@@ -5,7 +5,7 @@ module.exports = function(passport){
     passport.use ('facebook', new FacebookStrategy({
         clientID: '474313119430098',
         clientSecret: '24a6ef63a0c1f3a168689ab93ede182c',
-        callbackURL: "http://localhost:3000/auth/facebook/callback",
+        callbackURL: "http://foodopia.herokuapp.com/auth/facebook/callback",
         profileFields: ['name', 'emails','displayName']
         },
   // facebook will send back the tokens and profile

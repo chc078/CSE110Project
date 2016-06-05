@@ -116,10 +116,28 @@ shoppingList.controller("index", function ($scope, User, $http) {
 
   $scope.addItem = function() {
     if($scope.itemName && $scope.itemQuantity){
+      var found = false;
 
-      $scope.user.slist.push({"name":$scope.itemName, "shop":$scope.itemShop, "quantity": $scope.itemQuantity, "checked": false});
+      for (var i in $scope.user.slist) {
+        if ($scope.user.slist[i].name == $scope.itemName && $scope.user.slist[i].checked == false) {
+          found = true;
+          $scope.user.slist[i].quantity = $scope.user.slist[i].quantity + $scope.itemQuantity;
+          User.update({username: $scope.user.username},{"slist":$scope.user.slist});
+          break;
+        }
+      }
 
-      User.update({username: $scope.user.username},{"slist":$scope.user.slist});
+      if (!found) {
+        $scope.user.slist.push({
+          "name": $scope.itemName,
+          "shop": $scope.itemShop,
+          "quantity": $scope.itemQuantity,
+          "checked": false
+        });
+
+        User.update({username: $scope.user.username}, {"slist": $scope.user.slist});
+      }
+
       $scope.itemName = '';
       $scope.itemShop = '';
       $scope.itemQuantity = '';
@@ -134,17 +152,24 @@ shoppingList.controller("index", function ($scope, User, $http) {
 
   $scope.add = function(item){                      //add an item to vfridge
     var item = $scope.user.slist.indexOf(item);
-    $scope.user.vfridge.push($scope.user.slist[item]);        //changed
-    User.update({username: $scope.user.username},{"vfridge":$scope.user.vfridge});
+    var found = false;
+    for (var i in $scope.user.vfridge) {
+      if ($scope.user.vfridge[i].name == $scope.user.slist[item].name) {
+        found = true;
+        $scope.user.vfridge[i].quantity = $scope.user.vfridge[i].quantity + $scope.user.slist[item].quantity;
+        User.update({username: $scope.user.username}, {"vfridge": $scope.user.vfridge});
+        break;
+      }
+    }
+    if (!found) {
+      $scope.user.vfridge.push($scope.user.slist[item]);        //changed
+      User.update({username: $scope.user.username}, {"vfridge": $scope.user.vfridge});
+    }
+
     $scope.user.slist[item].checked = true;
     User.update({username: $scope.user.username},{"slist":$scope.user.slist});
 
   };
-  var item = User.find({username:myName},{"vfridge":1,"_id":0});
-  console.log(item);
 
-  console.log(item.vfridge);
-  //var arr_from_json = JSON.parse( item );
-  //console.log(arr_from_json);
 });
 //end of controller

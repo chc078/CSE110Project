@@ -1,5 +1,5 @@
 
-$('#taste').hide();
+$('#thanks').hide();
 $('#sensitive').hide();
 $('#basic').hide();
 $('#alwaysInFridge').hide();
@@ -50,13 +50,6 @@ $('#UserInfo').click(function(){
 });
 
 
-$('#Appetite').click(function(){
-    $('#function-container').fadeOut(100);
-    $('#taste').delay(100).fadeIn(100);
-    $('#back-button').delay(100).fadeIn(100);
-});
-
-
 $('#Allergy').click(function(){
     $('#function-container').fadeOut(100);
     $('#sensitive').delay(100).fadeIn(100);
@@ -70,9 +63,15 @@ $('#alwaysInMyFridge').click(function(){
     $('#back-button').delay(100).fadeIn(100);
 });
 
+$('#thx').click(function(){
+    $('#function-container').fadeOut(100);
+    $('#thanks').delay(100).fadeIn(100);
+    $('#back-button').delay(100).fadeIn(100);
+});
+
 
  $('#back-button').click(function(){
-     $('#taste').fadeOut(100);
+     $('#thanks').fadeOut(100);
      $('#basic').fadeOut(100);
      $('#sensitive').fadeOut(100);
      $('#alwaysInFridge').fadeOut(100);
