@@ -7,12 +7,8 @@ alwaysInFridge.controller("basic", function ($scope, User, $http) {
     
     var myName = document.getElementById('name').innerHTML;
     $scope.user = User.$get({username: myName});
-
-    $scope.remove = function(item) {
-        var index = $scope.user.myCreation.indexOf(item);    //remove an item from shopping list
-        $scope.user.myCreation.splice(index, 1);
-        User.update({username: $scope.user.username},{"myCreation":$scope.user.myCreation});
-    };
+    
+    
     
 });
 
